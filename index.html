@@ -1,0 +1,147 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Venkat Sadras — AI agents, built and run at home</title>
+<meta name="description" content="Venkat Sadras is an AI product manager. Miya is his personal AI agent; Rahat is the open-source platform underneath it. The system, the writing, and a demo every two weeks.">
+<link rel="canonical" href="https://venkatsadras.com/">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Venkat Sadras — AI agents, built and run at home">
+<meta property="og:description" content="Venkat Sadras is an AI product manager. Miya is his personal AI agent; Rahat is the open-source platform underneath it. The system, the writing, and a demo every two weeks.">
+<meta property="og:url" content="https://venkatsadras.com/">
+<meta property="og:image" content="https://venkatsadras.com/assets/img/rahat-map.png">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="theme-color" content="#eef1f7" media="(prefers-color-scheme: light)">
+<meta name="theme-color" content="#0d121a" media="(prefers-color-scheme: dark)">
+<link rel="icon" href="/assets/favicon.svg" type="image/svg+xml">
+<link rel="alternate" type="application/rss+xml" title="Venkat Sadras on Substack" href="https://venkatsadras.substack.com/feed">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo:wght@600;700;800&family=Source+Sans+3:wght@400;600&family=IBM+Plex+Mono:wght@400;500&display=swap">
+<link rel="stylesheet" href="/assets/site.css">
+<script src="/assets/site.js" defer></script>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"Person","name":"Venkat Sadras","url":"https://venkatsadras.com","jobTitle":"AI Product Manager","sameAs":["https://github.com/modernthinkerbuilds","https://venkatsadras.substack.com"]}</script>
+</head>
+<body>
+<a class="skip" href="#main">Skip to content</a>
+<header class="site-header">
+  <div class="wrap">
+    <a class="brand" href="/">Venkat Sadras</a>
+    <button class="menu-toggle" aria-expanded="false" aria-controls="nav">Menu</button>
+    <nav class="nav" id="nav" aria-label="Main">
+      <a href="/rahat/">Rahat</a>
+      <a href="/writing/">Writing</a>
+      <a href="/demos/">Demos</a>
+      <a href="/about/">About</a>
+      <a class="btn btn-primary" href="https://venkatsadras.substack.com/subscribe">Subscribe</a>
+    </nav>
+  </div>
+</header>
+<main id="main">
+<section class="hero">
+  <div class="wrap">
+    <p class="eyebrow">AI product manager · Bay Area</p>
+    <h1>Miya is my personal AI agent. Rahat is the platform underneath it.</h1>
+    <p class="lede">At home I build and run my own agents, with <strong>checks in the path, a harness every answer runs through, and a record of every decision.</strong> This is where I show the system, write about what it takes to trust agents, and ship a demo every two weeks.</p>
+    <div class="actions">
+      <a class="btn btn-primary" href="/rahat/">See the system →</a>
+      <a class="btn btn-ghost" href="/writing/">Read the writing</a>
+    </div>
+    <figure class="figure">
+      <a href="https://modernthinkerbuilds.github.io/Rahat-Plane/specs/RAHAT-ARCHITECTURE.html" aria-label="Open the live, interactive Rahat architecture page">
+        <img src="/assets/img/rahat-map.gif" width="960" height="547" alt="Rahat end to end: a message travels from Telegram through Miya's runner and the routing ladder to the agent that answers it, with the checks, the control plane and the memory around it">
+      </a>
+      <figcaption><span>A message moving through Rahat, from Telegram to the agent that answers it.</span><a href="https://modernthinkerbuilds.github.io/Rahat-Plane/specs/RAHAT-ARCHITECTURE.html">Open the live page →</a></figcaption>
+    </figure>
+    <ul class="proof" aria-label="Rahat in numbers">
+      <li><b>7</b>agents</li>
+      <li><b>3</b>front doors</li>
+      <li><b>4,209</b>tests</li>
+      <li><b>72</b>real asks in the eval set</li>
+      <li><b>7,408</b>decisions logged</li>
+    </ul>
+    <p class="asof">Counts as of Oct 17, 2026. Every one is in the repo.</p>
+  </div>
+</section>
+
+<section>
+  <div class="wrap">
+    <div class="section-head">
+      <p class="eyebrow">Start here</p>
+      <h2>Three ways in</h2>
+    </div>
+    <div class="cards">
+      <a class="card" style="--c: var(--code); --cb: var(--code-bg)" href="/rahat/">
+        <span class="tag">The system</span>
+        <h3>Rahat</h3>
+        <p>Seven agents sharing one memory, one rulebook and one record of every decision. What's running, what isn't, and the code.</p>
+        <span class="go">See the system →</span>
+      </a>
+      <a class="card" style="--c: var(--model); --cb: var(--model-bg)" href="/writing/">
+        <span class="tag">The series</span>
+        <h3>Where do we eat?</h3>
+        <p>My food agent wasn't ready for our family trip, so I made the trip its test. Six short episodes on what it takes to ship an agent.</p>
+        <span class="go">Read the writing →</span>
+      </a>
+      <a class="card" style="--c: var(--judge); --cb: var(--judge-bg)" href="/demos/">
+        <span class="tag">Every two weeks</span>
+        <h3>Demos</h3>
+        <p>One short, dated demo of something that shipped, with what's real and what isn't. No mockups.</p>
+        <span class="go">Watch the demos →</span>
+      </a>
+    </div>
+  </div>
+</section>
+
+<section class="band">
+  <div class="wrap narrow">
+    <p class="pull">A rule in a prompt is a request. <em>A check in the path is a guarantee.</em></p>
+    <p class="muted">An agent can be fluent and wrong at the same time, and you can't tell from reading it. Run more than one and they contradict each other, act at moments they shouldn't, and remember the wrong things. Those problems don't live in the model. They live in the layer underneath it. That layer is what I build.</p>
+  </div>
+</section>
+
+<section>
+  <div class="wrap">
+    <div class="section-head">
+      <p class="eyebrow">New</p>
+      <h2>Latest</h2>
+    </div>
+    <div class="two">
+<!-- LATEST:START -->
+<a class="card" style="--c: var(--model); --cb: var(--model-bg)" href="https://venkatsadras.substack.com/subscribe"><p class="eyebrow">Latest writing</p><h3>Where do we eat?</h3><p>My food agent wasn't ready for our family trip, so I made the trip its test. Episode 1 publishes this week.</p><span class="go">Subscribe for Episode 1 →</span></a>
+<!-- LATEST:END -->
+      <a class="card" style="--c: var(--judge); --cb: var(--judge-bg)" href="/demos/">
+        <p class="eyebrow">Latest demo · Oct 2026</p>
+        <h3>00 · The system map, moving</h3>
+        <p>A message travels through every layer of Rahat. Open the live page and tap any box to see what it does.</p>
+        <span class="go">See the demo →</span>
+      </a>
+    </div>
+  </div>
+</section>
+<section>
+  <div class="wrap">
+    <div class="subscribe">
+      <div>
+        <h2>Get each new post by email</h2>
+        <p>The writing goes out on Substack. Every post also lands here, searchable.</p>
+      </div>
+      <a class="btn btn-primary" href="https://venkatsadras.substack.com/subscribe">Subscribe on Substack →</a>
+    </div>
+  </div>
+</section>
+</main>
+<footer class="site-footer">
+  <div class="wrap">
+    <span>© 2026 Venkat Sadras · Views my own.</span>
+    <nav aria-label="Elsewhere">
+      <a href="TODO-LINKEDIN">LinkedIn</a>
+      <a href="https://github.com/modernthinkerbuilds">GitHub</a>
+      <a href="https://venkatsadras.substack.com">Substack</a>
+      <a href="https://venkatsadras.substack.com/feed">RSS</a>
+    </nav>
+  </div>
+</footer>
+</body>
+</html>
