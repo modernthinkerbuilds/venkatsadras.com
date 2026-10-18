@@ -19,7 +19,7 @@ The site is live about a minute later.
 
 ## Your photo
 
-Save a square photo as `assets/img/venkat.jpg` and replace the `<div class="avatar" …><span>VS</span></div>` placeholder on the home and About pages with `<div class="avatar"><img src="/assets/img/venkat.jpg" width="168" height="168" alt="Venkat Sadras"></div>`.
+`assets/img/venkat.jpg` (480×480, the round photo on the home and About pages) and `assets/img/venkat-desk.jpg` (720×900, About). To change either, replace the file with one the same shape.
 
 ## Agent portraits
 
