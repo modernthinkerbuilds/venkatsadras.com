@@ -1,0 +1,118 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Bourdain: Where do we eat? · Venkat Sadras</title>
+<meta name="description" content="Bourdain is one of the AI agents on Venkat Sadras's team. Every family asks it three times a day. A fluent suggestion isn't enough: the place has to be open, close enough, and right for everyone eating.">
+<link rel="canonical" href="https://venkatsadras.com/team/bourdain/">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Bourdain: Where do we eat? · Venkat Sadras">
+<meta property="og:description" content="Bourdain is one of the AI agents on Venkat Sadras's team. Every family asks it three times a day. A fluent suggestion isn't enough: the place has to be open, close enough, and right for everyone eating.">
+<meta property="og:url" content="https://venkatsadras.com/team/bourdain/">
+<meta property="og:image" content="https://venkatsadras.com/assets/img/rahat-map.png">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="theme-color" content="#eef1f7" media="(prefers-color-scheme: light)">
+<meta name="theme-color" content="#0d121a" media="(prefers-color-scheme: dark)">
+<link rel="icon" href="/assets/favicon.svg" type="image/svg+xml">
+<link rel="alternate" type="application/rss+xml" title="Venkat Sadras on Substack" href="https://venkatsadras.substack.com/feed">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo:wght@600;700;800&family=Source+Sans+3:wght@400;600&family=IBM+Plex+Mono:wght@400;500&display=swap">
+<link rel="stylesheet" href="/assets/site.css">
+<script src="/assets/site.js" defer></script>
+</head>
+<body>
+<a class="skip" href="#main">Skip to content</a>
+<header class="site-header">
+  <div class="wrap">
+    <a class="brand" href="/">Venkat Sadras</a>
+    <button class="menu-toggle" aria-expanded="false" aria-controls="nav">Menu</button>
+    <nav class="nav" id="nav" aria-label="Main">
+      <a href="/team/" aria-current="page">Team</a>
+      <a href="/rahat/">Rahat</a>
+      <a href="/writing/">Writing</a>
+      <a href="/demos/">Demos</a>
+      <a href="/about/">About</a>
+      <a class="btn btn-primary" href="https://venkatsadras.substack.com/subscribe">Subscribe</a>
+    </nav>
+  </div>
+</header>
+<main id="main">
+<section class="hero" style="--c: var(--plane); --cb: var(--plane-bg)">
+  <div class="wrap agent-hero">
+    <img src="/assets/team/bourdain.svg" width="200" height="200" alt="Bourdain, drawn as a robot">
+    <div>
+      <p class="eyebrow"><a href="/team/">The team</a> · Agent</p>
+      <h1>Bourdain</h1>
+      <p class="lede"><strong>Where do we eat?</strong></p>
+      <ul class="pills" style="--c: var(--plane); --cb: var(--plane-bg)"><li class="on">Own bot</li><li class="">On the harness since Oct 4</li></ul>
+    </div>
+  </div>
+</section>
+
+<section style="padding-top:8px" style="--c: var(--plane); --cb: var(--plane-bg)">
+  <div class="wrap">
+    <div class="facts">
+      <div class="fact"><h2>The problem</h2><p>Every family asks it three times a day. A fluent suggestion isn't enough: the place has to be open, close enough, and right for everyone eating.</p></div>
+      <div class="fact"><h2>Why I have it</h2><p>Bourdain answers from places it already knows, with a source and a date for each fact, and searches live only when that comes up short. It's also the first agent on the harness, the test bed for how every agent will be built.</p></div>
+      <div class="fact"><h2>What it does</h2><ul><li>Picks places, then checks each pick against its evidence in code.</li><li>Shows its sources with every answer.</li><li>Works under a spending brake on every ask: at most 12 tool calls, 10 searches and $0.50.</li></ul></div>
+      <div class="fact"><h2>Where it helped</h2><ul><li>Went live the night before a family trip to New York and Boston, and ran the trip. That trip became its test: <a href="/writing/">the series</a> tells the story.</li><li><b>326</b> places and <b>3,397</b> facts, each with its source and the date it was read (Oct 14).</li><li>A judge has graded <b>214</b> answers, all in shadow. It gets no vote until it agrees with my own labels.</li></ul></div>
+    </div>
+  </div>
+</section>
+
+<section style="--c: var(--plane); --cb: var(--plane-bg)">
+  <div class="wrap">
+    <div class="section-head">
+      <p class="eyebrow">How it works</p>
+      <h2>One message, step by step</h2>
+      <p>Each step lights up in turn. The names are the real components in the code.</p>
+    </div>
+    <ol class="flow" style="--n:8">
+      <li style="--i:0"><b>Telegram</b>Its own bot.</li>
+      <li style="--i:1"><b>Understand</b>The ask becomes a typed request. No pattern-matching on free text.</li>
+      <li style="--i:2"><b>Contract</b>The outcomes this answer must meet.</li>
+      <li style="--i:3"><b>Execute</b>The knowledge base and maps, under the spending brake.</li>
+      <li style="--i:4"><b>Verify</b>Code checks every pick against its evidence.</li>
+      <li style="--i:5"><b>Judge</b>A second model grades taste. In shadow for now.</li>
+      <li style="--i:6"><b>Control</b>One repair, or it says plainly what failed.</li>
+      <li style="--i:7"><b>Back to me</b>With a sources line, and the run is recorded.</li>
+    </ol>
+  </div>
+</section>
+
+<section style="padding-top:8px" style="--c: var(--plane); --cb: var(--plane-bg)">
+  <div class="wrap">
+    <div class="facts">
+      <div class="fact wide"><h2>Not built yet</h2><ul><li>Answering from the database first, before any model, isn't built.</li><li>The judge has no authority yet: it needs 50 of my labels and 80% agreement.</li><li>It joins Miya when it passes. It hasn't yet.</li></ul>
+        <div class="actions" style="margin-top:6px">
+          <a class="btn btn-ghost" href="https://github.com/modernthinkerbuilds/Rahat-Plane/tree/main/agents/bourdain">Read its code →</a>
+          <a class="btn btn-ghost" href="https://modernthinkerbuilds.github.io/Rahat-Plane/specs/ADR-018.html">Walk the harness, step by step →</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section style="padding-top:8px">
+  <div class="wrap agent-nav">
+    <a href="/team/genie/">← Genie</a>
+    <a href="/team/">All agents</a>
+    <a href="/team/bajrangi/">Bajrangi →</a>
+  </div>
+</section>
+</main>
+<footer class="site-footer">
+  <div class="wrap">
+    <span>© 2026 Venkat Sadras · Views my own.</span>
+    <nav aria-label="Elsewhere">
+      <a href="https://www.linkedin.com/in/venkatsadras/">LinkedIn</a>
+      <a href="https://github.com/modernthinkerbuilds">GitHub</a>
+      <a href="https://venkatsadras.substack.com">Substack</a>
+      <a href="https://venkatsadras.substack.com/feed">RSS</a>
+    </nav>
+  </div>
+</footer>
+</body>
+</html>

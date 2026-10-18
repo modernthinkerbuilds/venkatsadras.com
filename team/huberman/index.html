@@ -1,0 +1,116 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Huberman: The evening wind-down. · Venkat Sadras</title>
+<meta name="description" content="Huberman is one of the AI agents on Venkat Sadras's team. My old cooldown routine was the same few drills every day, so I stopped doing it.">
+<link rel="canonical" href="https://venkatsadras.com/team/huberman/">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Huberman: The evening wind-down. · Venkat Sadras">
+<meta property="og:description" content="Huberman is one of the AI agents on Venkat Sadras's team. My old cooldown routine was the same few drills every day, so I stopped doing it.">
+<meta property="og:url" content="https://venkatsadras.com/team/huberman/">
+<meta property="og:image" content="https://venkatsadras.com/assets/img/rahat-map.png">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="theme-color" content="#eef1f7" media="(prefers-color-scheme: light)">
+<meta name="theme-color" content="#0d121a" media="(prefers-color-scheme: dark)">
+<link rel="icon" href="/assets/favicon.svg" type="image/svg+xml">
+<link rel="alternate" type="application/rss+xml" title="Venkat Sadras on Substack" href="https://venkatsadras.substack.com/feed">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo:wght@600;700;800&family=Source+Sans+3:wght@400;600&family=IBM+Plex+Mono:wght@400;500&display=swap">
+<link rel="stylesheet" href="/assets/site.css">
+<script src="/assets/site.js" defer></script>
+</head>
+<body>
+<a class="skip" href="#main">Skip to content</a>
+<header class="site-header">
+  <div class="wrap">
+    <a class="brand" href="/">Venkat Sadras</a>
+    <button class="menu-toggle" aria-expanded="false" aria-controls="nav">Menu</button>
+    <nav class="nav" id="nav" aria-label="Main">
+      <a href="/team/" aria-current="page">Team</a>
+      <a href="/rahat/">Rahat</a>
+      <a href="/writing/">Writing</a>
+      <a href="/demos/">Demos</a>
+      <a href="/about/">About</a>
+      <a class="btn btn-primary" href="https://venkatsadras.substack.com/subscribe">Subscribe</a>
+    </nav>
+  </div>
+</header>
+<main id="main">
+<section class="hero" style="--c: var(--judge); --cb: var(--judge-bg)">
+  <div class="wrap agent-hero">
+    <img src="/assets/team/huberman.svg" width="200" height="200" alt="Huberman, drawn as a robot">
+    <div>
+      <p class="eyebrow"><a href="/team/">The team</a> · Agent</p>
+      <h1>Huberman</h1>
+      <p class="lede"><strong>The evening wind-down.</strong></p>
+      <ul class="pills" style="--c: var(--judge); --cb: var(--judge-bg)"><li class="on">Behind Miya</li><li class="">Live since Aug 24</li></ul>
+    </div>
+  </div>
+</section>
+
+<section style="padding-top:8px" style="--c: var(--judge); --cb: var(--judge-bg)">
+  <div class="wrap">
+    <div class="facts">
+      <div class="fact"><h2>The problem</h2><p>My old cooldown routine was the same few drills every day, so I stopped doing it.</p></div>
+      <div class="fact"><h2>Why I have it</h2><p>Huberman shows up on its own each evening with a cooldown built for the day I actually had, and it rotates through a library so it doesn't repeat itself.</p></div>
+      <div class="fact"><h2>What it does</h2><ul><li>Reads the day's training and recovery, and what the gym programmed.</li><li>Builds the session from a library of 25 drills, skipping the ones I've done recently.</li><li>Says so when it can't tell whether I trained, and offers the other version.</li></ul></div>
+      <div class="fact"><h2>Where it helped</h2><ul><li>Live every evening since <b>Aug 24</b>, and on rest days since Aug 25.</li><li><b>Never empty:</b> if the model can't answer, the session still comes from the library.</li><li><b>6</b> regression tests pinned on it.</li></ul></div>
+    </div>
+  </div>
+</section>
+
+<section style="--c: var(--judge); --cb: var(--judge-bg)">
+  <div class="wrap">
+    <div class="section-head">
+      <p class="eyebrow">How it works</p>
+      <h2>One message, step by step</h2>
+      <p>Each step lights up in turn. The names are the real components in the code.</p>
+    </div>
+    <ol class="flow" style="--n:6">
+      <li style="--i:0"><b>Evening tick</b>Once a day, nobody has to ask.</li>
+      <li style="--i:1"><b>Read the day</b>Training and recovery, from the vault.</li>
+      <li style="--i:2"><b>Drill library</b>25 drills. Recent ones are skipped.</li>
+      <li style="--i:3"><b>The model</b>Writes the coaching, with a 90-second limit.</li>
+      <li style="--i:4"><b>Never-empty floor</b>If the model fails, the library session still goes out.</li>
+      <li style="--i:5"><b>Telegram</b>Sent. A missed send is retried the next minute.</li>
+    </ol>
+  </div>
+</section>
+
+<section style="padding-top:8px" style="--c: var(--judge); --cb: var(--judge-bg)">
+  <div class="wrap">
+    <div class="facts">
+      <div class="fact wide"><h2>Not built yet</h2><ul><li>Its memory still borrows the prototype's adapter (see Bajrangi).</li></ul>
+        <div class="actions" style="margin-top:6px">
+          <a class="btn btn-ghost" href="https://github.com/modernthinkerbuilds/Rahat-Plane/tree/main/agents/huberman">Read its code →</a>
+          
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section style="padding-top:8px">
+  <div class="wrap agent-nav">
+    <a href="/team/fraser/">← Fraser</a>
+    <a href="/team/">All agents</a>
+    <a href="/team/genie/">Genie →</a>
+  </div>
+</section>
+</main>
+<footer class="site-footer">
+  <div class="wrap">
+    <span>© 2026 Venkat Sadras · Views my own.</span>
+    <nav aria-label="Elsewhere">
+      <a href="https://www.linkedin.com/in/venkatsadras/">LinkedIn</a>
+      <a href="https://github.com/modernthinkerbuilds">GitHub</a>
+      <a href="https://venkatsadras.substack.com">Substack</a>
+      <a href="https://venkatsadras.substack.com/feed">RSS</a>
+    </nav>
+  </div>
+</footer>
+</body>
+</html>

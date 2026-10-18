@@ -10,6 +10,21 @@
     });
   }
 
+  // Agent flows: light up one step at a time
+  var reduce = window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  Array.prototype.forEach.call(document.querySelectorAll('.flow'), function (flow) {
+    var steps = flow.querySelectorAll('li');
+    if (!steps.length) return;
+    if (reduce) { steps[0].classList.add('on'); return; }
+    var k = 0;
+    steps[0].classList.add('on');
+    setInterval(function () {
+      steps[k].classList.remove('on');
+      k = (k + 1) % steps.length;
+      steps[k].classList.add('on');
+    }, 1100);
+  });
+
   // Search + series filter on lists that opt in with [data-filterable]
   var list = document.querySelector('[data-filterable]');
   if (!list) return;
