@@ -232,3 +232,9 @@ a.card:hover { transform: translateY(-2px); box-shadow: 0 14px 30px -18px var(--
 @media (max-width: 720px) { .offline { grid-template-columns: 1fr; } }
 .offline li { background: var(--panel); border: 1px solid var(--line); border-radius: 12px; padding: 14px 16px; margin: 0; }
 .offline li strong { display: block; font-family: var(--display); }
+
+/* Miya page: who answers what */
+.asks { list-style: none; padding: 0; margin: 0; grid-template-columns: repeat(3, 1fr); }
+.asks h3 { font-size: 18px; }
+@media (max-width: 960px) { .asks { grid-template-columns: 1fr 1fr; } }
+@media (max-width: 600px) { .asks { grid-template-columns: 1fr; } }
