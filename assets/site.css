@@ -243,3 +243,10 @@ a.card:hover { transform: translateY(-2px); box-shadow: 0 14px 30px -18px var(--
 .photo { margin: 30px 0 8px; }
 .photo img { width: 100%; max-width: 520px; border-radius: var(--radius); border: 1px solid var(--line); box-shadow: 0 14px 34px -20px var(--shadow); }
 .photo figcaption { font-size: 15px; color: var(--muted); margin-top: 8px; }
+
+/* Agent pages: a real photo of who the agent works for */
+.who { display: grid; grid-template-columns: minmax(0, 340px) 1fr; gap: 32px; align-items: center; background: var(--panel); border: 1px solid var(--line); border-radius: var(--radius); padding: 16px; }
+.who img { width: 100%; border-radius: 10px; border-left: 4px solid var(--c); }
+.who h2 { margin-bottom: 10px; }
+.who p.muted { font-size: 18px; max-width: 520px; }
+@media (max-width: 720px) { .who { grid-template-columns: 1fr; gap: 16px; } .who > div { padding: 0 6px 8px; } }
