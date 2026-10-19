@@ -23,7 +23,7 @@ The site is live about a minute later.
 
 ## Agent portraits
 
-`assets/team/*.svg` are original robot characters, one per job.
+`assets/team/*.jpg` are the badger portraits, one per agent (480×480, shown in a circle). The `*.svg` robots are the earlier drawings, kept as fallbacks.
 
 ## Adding a demo
 
