@@ -3,13 +3,13 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Rahat, the platform under Miya · Venkat Sadras</title>
-<meta name="description" content="Rahat is the open-source platform under Miya, a personal AI agent: specialist agents, checks in code on the way out, a harness for new agents, and a record of every decision.">
+<title>Under the hood: Rahat, the platform under Miya · Venkat Sadras</title>
+<meta name="description" content="Miya is the agent Venkat Sadras talks to. Rahat is the open-source platform under it: specialist agents, checks in code on the way out, a harness for new agents, and a record of every decision.">
 <link rel="canonical" href="https://venkatsadras.com/rahat/">
 <meta property="og:type" content="website">
 <meta property="og:site_name" content="Venkat Sadras">
-<meta property="og:title" content="Rahat, the platform under Miya · Venkat Sadras">
-<meta property="og:description" content="Rahat is the open-source platform under Miya, a personal AI agent: specialist agents, checks in code on the way out, a harness for new agents, and a record of every decision.">
+<meta property="og:title" content="Under the hood: Rahat, the platform under Miya · Venkat Sadras">
+<meta property="og:description" content="Miya is the agent Venkat Sadras talks to. Rahat is the open-source platform under it: specialist agents, checks in code on the way out, a harness for new agents, and a record of every decision.">
 <meta property="og:url" content="https://venkatsadras.com/rahat/">
 <meta property="og:image" content="https://venkatsadras.com/assets/img/og-card.png">
 <meta property="og:image:width" content="1200">
@@ -34,7 +34,7 @@
     <nav class="nav" id="nav" aria-label="Main">
       <a href="/miya/">Miya</a>
       <a href="/team/">Team</a>
-      <a href="/rahat/" aria-current="page">Rahat</a>
+      <a href="/rahat/" aria-current="page">Under the hood</a>
       <a href="/writing/">Writing</a>
       <a href="/demos/">Demos</a>
       <a href="/about/">About</a>
@@ -45,20 +45,20 @@
 <main id="main">
 <section class="hero">
   <div class="wrap">
-    <p class="eyebrow">Open source · Apache 2.0 · Mac mini at home</p>
-    <h1>Rahat</h1>
-    <p class="lede">Miya is the one I talk to. Rahat is everything underneath: <strong>the specialist agents, the checks between an answer and me, the harness Bourdain's answers run through, and a record of every decision.</strong> It runs around the clock on a Mac mini at home.</p>
+    <p class="eyebrow">Rahat · open source · Apache 2.0 · Mac mini at home</p>
+    <h1>Under the hood</h1>
+    <p class="lede"><strong>Miya is the agent I talk to. Rahat is the platform under it:</strong> the specialist agents, the checks between an answer and me, the harness Bourdain's answers run through, and a record of every decision. It runs around the clock on a Mac mini at home.</p>
     <figure class="figure">
-      <video class="map" controls muted loop playsinline preload="none" poster="/assets/img/rahat-map.png" width="960" height="546" aria-label="The Rahat map: a message goes from Telegram through Miya's rules to the agent that answers it, past the checks and into the shared record, animated">
+      <video class="map" controls muted loop playsinline preload="none" poster="/assets/img/rahat-map.png" width="960" height="546" aria-label="Under the hood: a message goes from Telegram through Miya's rules to the agent that answers it, past the checks and into the shared record, animated">
         <source src="/assets/img/rahat-map.webm" type="video/webm">
         <source src="/assets/img/rahat-map.mp4" type="video/mp4">
       </video>
-      <a class="still" href="https://modernthinkerbuilds.github.io/Rahat-Plane/specs/RAHAT-ARCHITECTURE.html"><img src="/assets/img/rahat-map.png" width="1266" height="720" alt="The Rahat map: a message goes from Telegram through Miya's rules to the agent that answers it, past the checks and into the shared record" loading="lazy"></a>
-      <figcaption><span>A <code>/week</code> message moving through Rahat, from Telegram to Kobe, the agent that answers it.</span><a href="https://modernthinkerbuilds.github.io/Rahat-Plane/specs/RAHAT-ARCHITECTURE.html">Open the live page ↗</a></figcaption>
+      <a class="still" href="https://modernthinkerbuilds.github.io/Rahat-Plane/specs/RAHAT-ARCHITECTURE.html"><img src="/assets/img/rahat-map.png" width="1266" height="720" alt="Under the hood: a message goes from Telegram through Miya's rules to the agent that answers it, past the checks and into the shared record" loading="lazy"></a>
+      <figcaption><span>A <code>/week</code> message moving through Miya and the platform under it, from Telegram to Kobe, the agent that answers it.</span><a href="https://modernthinkerbuilds.github.io/Rahat-Plane/specs/RAHAT-ARCHITECTURE.html">Open the live page ↗</a></figcaption>
     </figure>
     <ul class="proof" aria-label="Rahat in numbers">
       <li><b>6</b> agents</li>
-      <li><b>3</b> chat bots</li>
+      <li><b>3</b> doors</li>
       <li><b>4,209</b> tests</li>
       <li><b>86</b> real asks in the eval sets</li>
       <li><b>7,408</b> decisions logged</li>
@@ -110,7 +110,7 @@
 <section>
   <div class="wrap prose">
     <h2>What's running today</h2>
-    <p class="muted">Each agent reaches me through Telegram. Three have a chat bot of their own (Miya, Genie, Bourdain); the rest answer through Miya. Dates are when each count was taken.</p>
+    <p class="muted">Everything reaches me through Telegram. A <em>door</em> is a way to reach an agent directly: Miya's is where I ask almost everything, Genie has one for the household, and Bourdain has one while it's being tested. Kobe, Fraser and Huberman answer only through Miya. Dates are when each count was taken.</p>
     <div class="tbl-scroll">
     <table class="tbl running">
       <thead><tr><th scope="col">What</th><th scope="col">Status</th><th scope="col">As of</th><th scope="col">Code</th></tr></thead>
@@ -132,7 +132,7 @@
 <section class="tight">
   <div class="wrap narrow prose">
     <h2>How an agent joins</h2>
-    <p>Bourdain is the first agent to start on its own chat bot, with its own tests, where its failures are easy to see and can't break anything else. It has been there since Sep 20 and on the harness since Oct 4; when it passes, it's wired in behind Miya, and Miya stays the one place I ask. Genie went the other way round, behind Miya on Aug 6 and then its own bot for the household on Aug 10. Bourdain's route is the route from here on.</p>
+    <p>Bourdain is the first agent to start on its own door, with its own tests, where its failures are easy to see and can't break anything else. It has been there since Sep 20 and on the harness since Oct 4; when it passes, it's wired in behind Miya, and Miya stays the one place I ask. Genie went the other way round, behind Miya on Aug 6 and then its own door for the household on Aug 10. Bourdain's route is the route from here on.</p>
     <p>Orchestration is the part I'm least done with. Today sixteen rules in code answer the asks they recognize, most without a model, and Miya's model handles the rest. Routing each ask by what every agent declares it can do is planned, not built.</p>
     <p><a href="https://github.com/modernthinkerbuilds/Rahat-Plane/blob/main/specs/ARCHITECTURE.md">Read how Rahat actually runs ↗</a></p>
   </div>

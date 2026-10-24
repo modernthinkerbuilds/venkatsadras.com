@@ -289,3 +289,14 @@ a.item.latest { margin-bottom: 14px; }
 img.round { border-radius: 50%; object-fit: cover; background: #f6f1e7; box-shadow: 0 0 0 3px var(--line); }
 
 @media (prefers-reduced-motion: reduce) { * { transition: none !important; } }
+
+/* Home: Meet Miya */
+.meet { display: grid; grid-template-columns: 160px 1fr; gap: 32px; align-items: start; background: var(--panel); border: 1px solid var(--line); border-radius: var(--radius); padding: 26px; }
+.meet img { width: 160px; height: 160px; margin-top: 4px; }
+.meet h2 { margin-bottom: 10px; }
+.meet > div > p:first-of-type { font-size: 18px; }
+.asks-compact { list-style: none; margin: 14px 0 0; padding: 0; display: grid; grid-template-columns: 1fr 1fr; gap: 6px 22px; }
+.asks-compact li { display: flex; flex-direction: column; padding: 8px 0; border-top: 1px solid var(--line-soft); font-size: 16px; }
+.asks-compact b { font-family: var(--display); font-weight: 700; font-size: 15.5px; }
+.asks-compact span { color: var(--muted); }
+@media (max-width: 720px) { .meet { grid-template-columns: 1fr; gap: 16px; padding: 20px; } .meet img { width: 112px; height: 112px; } .asks-compact { grid-template-columns: 1fr; } }

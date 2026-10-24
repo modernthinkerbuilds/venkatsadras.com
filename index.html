@@ -4,12 +4,12 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Venkat Sadras — product manager, AI agents</title>
-<meta name="description" content="Venkat Sadras is a product manager in the Bay Area working on AI agents. At home he runs Miya, his personal AI agent, and a team of five specialists on Rahat, the open-source platform he built under them.">
+<meta name="description" content="Venkat Sadras is a product manager in the Bay Area working on AI agents. At home he built Miya, his personal AI agent: one agent he talks to, five specialists behind it, and the open-source platform under them.">
 <link rel="canonical" href="https://venkatsadras.com/">
 <meta property="og:type" content="website">
 <meta property="og:site_name" content="Venkat Sadras">
 <meta property="og:title" content="Venkat Sadras — product manager, AI agents">
-<meta property="og:description" content="Venkat Sadras is a product manager in the Bay Area working on AI agents. At home he runs Miya, his personal AI agent, and a team of five specialists on Rahat, the open-source platform he built under them.">
+<meta property="og:description" content="Venkat Sadras is a product manager in the Bay Area working on AI agents. At home he built Miya, his personal AI agent: one agent he talks to, five specialists behind it, and the open-source platform under them.">
 <meta property="og:url" content="https://venkatsadras.com/">
 <meta property="og:image" content="https://venkatsadras.com/assets/img/og-card.png">
 <meta property="og:image:width" content="1200">
@@ -35,7 +35,7 @@
     <nav class="nav" id="nav" aria-label="Main">
       <a href="/miya/">Miya</a>
       <a href="/team/">Team</a>
-      <a href="/rahat/">Rahat</a>
+      <a href="/rahat/">Under the hood</a>
       <a href="/writing/">Writing</a>
       <a href="/demos/">Demos</a>
       <a href="/about/">About</a>
@@ -50,7 +50,7 @@
     <div>
       <p class="eyebrow">Product manager · AI agents · Bay&nbsp;Area</p>
       <h1>Venkat Sadras</h1>
-      <p class="lede">By day I work on AI agents for regulated enterprises. At home I run <strong><a href="/miya/">Miya</a>, my personal AI agent, and the five specialists behind it,</strong> on Rahat, the open-source platform I built under them.</p>
+      <p class="lede">By day I work on AI agents for regulated enterprises. At home I built <strong><a href="/miya/">Miya</a>, my personal AI agent:</strong> one agent I talk to, five specialists behind it, and the platform they run on, open source.</p>
       <div class="links-row">
         <a class="btn btn-primary" href="https://www.linkedin.com/in/venkatsadras/">LinkedIn ↗</a>
         <a class="small-link" href="https://github.com/modernthinkerbuilds">GitHub ↗</a>
@@ -61,37 +61,57 @@
   </div>
 </section>
 
-<section class="band">
-  <div class="wrap narrow">
-    <h2>The rewrite that mattered</h2>
-    <p>A few weeks in, Miya told me a fact about me that had never been true, in a flawless voice. My first instinct was the wrong one: I went to the prompt. Ten patches later I was treating a systemic failure as a run of bad luck, so I asked which layer of the system was supposed to catch this. Nothing was there.</p>
-    <p>I stopped adding features and rebuilt the core: the facts on record about me go in front of the model, and a validator sits between the agent and me. <strong>A rule in a prompt is a request. A check in code, on the way out, runs every time.</strong></p>
-    <p>Then I replayed 126 real messages from my own history. Internal-voice leaks went to 0%, and about one reply in twenty had a contradiction the validator caught and corrected.</p>
+<section class="tight">
+  <div class="wrap">
+    <div class="meet">
+      <img src="/assets/team/miya.jpg" width="160" height="160" alt="Miya, a badger in a dark kurta and gold scarf, holding a glass of chai" class="round" loading="lazy">
+      <div>
+        <h2>Meet Miya</h2>
+        <p>Miya is the one agent I talk to, on Telegram, about my training, my evenings, the family's weekends and where we eat. It has been live since June 8. Behind it, five specialists each own one job; Miya sends each ask to the one that owns it, checks the answer against the facts on record, and replies in one voice.</p>
+        <ul class="asks-compact">
+      <li><b>“Where am I this week?”</b><span>Kobe, computed in code</span></li>
+      <li><b>“Design me a session for tomorrow.”</b><span>Fraser, then ten checks in code</span></li>
+      <li><b>“Give me a cooldown.”</b><span>Huberman, every evening on its own</span></li>
+      <li><b>“What's on this weekend?”</b><span>Genie, from 122 event sources</span></li>
+      <li><b>“Where do we eat?”</b><span>Bourdain, on its own door while it's tested</span></li>
+      <li><b>Anything else</b><span>Miya's model, in one voice</span></li>
+        </ul>
+        <p class="more"><a href="/miya/">More about Miya →</a></p>
+      </div>
+    </div>
   </div>
 </section>
 
-<section id="team">
+<section id="team" class="tight">
   <div class="wrap">
     <div class="section-head">
-      <h2>The team</h2>
-      <p>Six agents. Miya is the one I talk to; five specialists each own one job. Tap one for what it does, where it helped and how it works.</p>
+      <h2>The team behind Miya</h2>
+      <p>Five specialists and Miya. Tap one for what it does, where it helped and how it works.</p>
     </div>
     <ul class="wall compact">
-<li><a href="/miya/"><img src="/assets/team/miya.jpg" width="88" height="88" alt="" class="round"><span class="nm">Miya</span><span class="rl">The one I talk to.</span><span class="st live">Leads</span></a></li>
+<li><a href="/miya/"><img src="/assets/team/miya.jpg" width="88" height="88" alt="" class="round"><span class="nm">Miya</span><span class="rl">The one I talk to.</span><span class="st live">Live</span></a></li>
 <li><a href="/team/kobe/"><img src="/assets/team/kobe.jpg" width="88" height="88" alt="" class="round"><span class="nm">Kobe</span><span class="rl">The numbers.</span><span class="st live">Through Miya</span></a></li>
 <li><a href="/team/fraser/"><img src="/assets/team/fraser.jpg" width="88" height="88" alt="" class="round"><span class="nm">Fraser</span><span class="rl">Designs workouts.</span><span class="st live">Through Miya</span></a></li>
 <li><a href="/team/huberman/"><img src="/assets/team/huberman.jpg" width="88" height="88" alt="" class="round"><span class="nm">Huberman</span><span class="rl">The evening wind-down.</span><span class="st live">Through Miya</span></a></li>
 <li><a href="/team/genie/"><img src="/assets/team/genie.jpg" width="88" height="88" alt="" class="round"><span class="nm">Genie</span><span class="rl">Weekends and the family calendar.</span><span class="st live">Through Miya</span></a></li>
-<li><a href="/team/bourdain/"><img src="/assets/team/bourdain.jpg" width="88" height="88" alt="" class="round"><span class="nm">Bourdain</span><span class="rl">Where do we eat?</span><span class="st own">Own bot</span></a></li>
+<li><a href="/team/bourdain/"><img src="/assets/team/bourdain.jpg" width="88" height="88" alt="" class="round"><span class="nm">Bourdain</span><span class="rl">Where do we eat?</span><span class="st own">Own door</span></a></li>
 </ul>
   </div>
 </section>
 
-<section class="tight">
+<section class="band">
+  <div class="wrap narrow">
+    <h2>Why Miya checks before it speaks</h2>
+    <p>A few weeks after I started talking to Miya, it told me something about myself that had never been true, in a flawless voice. I went to the prompt first. Ten patches later I was treating a systemic failure as bad luck, so I asked which layer was supposed to catch this. Nothing was.</p>
+    <p>I stopped adding features and rebuilt the core: the facts on record about me go in front of the model, and a validator checks every reply on the way out. <strong>A rule in a prompt is a request. A check in code runs every time.</strong> Replaying 126 of my real messages afterwards: internal-voice leaks went to 0%, and about one reply in twenty had a contradiction the validator caught.</p>
+  </div>
+</section>
+
+<section>
   <div class="wrap">
     <div class="section-head">
-      <h2>Rahat, the platform under the team</h2>
-      <p>One message, end to end. Rules in code meet it first, a specialist answers, a check runs on the way out, and every decision is written down. Open source.</p>
+      <h2>Under the hood</h2>
+      <p>Rahat is the platform under Miya, open source. Rules in code meet each message first, a specialist answers, a check runs on the way out, and every decision is written down. One message, end to end:</p>
     </div>
     <div class="flow-wrap">
     <ol class="flow" style="--n:5">
@@ -104,7 +124,7 @@
     <button class="replay" type="button" hidden>Replay</button>
     </div>
     <div class="actions">
-      <a class="btn btn-ghost" href="/rahat/">How Rahat works →</a>
+      <a class="btn btn-ghost" href="/rahat/">How it works →</a>
       <a class="btn btn-ghost" href="/demos/">Demo 00: the map, moving →</a>
     </div>
   </div>
