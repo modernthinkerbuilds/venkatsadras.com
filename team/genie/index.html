@@ -4,13 +4,16 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Genie: Weekends and the family calendar. · Venkat Sadras</title>
-<meta name="description" content="Genie is one of the AI agents on Venkat Sadras's team. "What should we do this weekend?" comes up every week, and the answer is buried in a dozen event pages nobody has time to read.">
+<meta name="description" content="Genie is one of the AI agents on Venkat Sadras&#x27;s team. “What should we do this weekend?” comes up every week, and the answer is buried in a dozen event pages nobody has time to read.">
 <link rel="canonical" href="https://venkatsadras.com/team/genie/">
 <meta property="og:type" content="website">
+<meta property="og:site_name" content="Venkat Sadras">
 <meta property="og:title" content="Genie: Weekends and the family calendar. · Venkat Sadras">
-<meta property="og:description" content="Genie is one of the AI agents on Venkat Sadras's team. "What should we do this weekend?" comes up every week, and the answer is buried in a dozen event pages nobody has time to read.">
+<meta property="og:description" content="Genie is one of the AI agents on Venkat Sadras&#x27;s team. “What should we do this weekend?” comes up every week, and the answer is buried in a dozen event pages nobody has time to read.">
 <meta property="og:url" content="https://venkatsadras.com/team/genie/">
-<meta property="og:image" content="https://venkatsadras.com/assets/img/rahat-map.png">
+<meta property="og:image" content="https://venkatsadras.com/assets/img/og-card.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
 <meta name="twitter:card" content="summary_large_image">
 <meta name="theme-color" content="#eef1f7" media="(prefers-color-scheme: light)">
 <meta name="theme-color" content="#0d121a" media="(prefers-color-scheme: dark)">
@@ -19,15 +22,15 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo:wght@600;700;800&family=Source+Sans+3:wght@400;600&family=IBM+Plex+Mono:wght@400;500&display=swap">
-<link rel="stylesheet" href="/assets/site.css">
-<script src="/assets/site.js" defer></script>
+<link rel="stylesheet" href="/assets/site.css?v=3">
+<script src="/assets/site.js?v=3" defer></script>
 </head>
 <body>
 <a class="skip" href="#main">Skip to content</a>
 <header class="site-header">
   <div class="wrap">
     <a class="brand" href="/">Venkat Sadras</a>
-    <button class="menu-toggle" aria-expanded="false" aria-controls="nav">Menu</button>
+    <button class="menu-toggle" aria-expanded="false" aria-controls="nav"><span>Menu</span></button>
     <nav class="nav" id="nav" aria-label="Main">
       <a href="/miya/">Miya</a>
       <a href="/team/" aria-current="page">Team</a>
@@ -35,59 +38,63 @@
       <a href="/writing/">Writing</a>
       <a href="/demos/">Demos</a>
       <a href="/about/">About</a>
-      <a class="btn btn-primary" href="https://venkatsadras.substack.com/subscribe">Subscribe</a>
+      <a class="btn btn-primary" href="https://www.linkedin.com/in/venkatsadras/">LinkedIn ↗</a>
     </nav>
   </div>
 </header>
 <main id="main">
 <section class="hero" style="--c: var(--store); --cb: var(--store-bg)">
   <div class="wrap agent-hero">
-    <img src="/assets/team/genie.jpg" width="200" height="200" alt="Genie, drawn as a cheerful badger with a topknot and a gold scarf, holding a small brass lamp, with a map and biscuits beside it" class="round">
+    <img src="/assets/team/genie.jpg" width="200" height="200" alt="Genie, a badger with a topknot and gold scarf, holding a small brass lamp" class="round">
     <div>
-      <p class="eyebrow"><a href="/team/">The team</a> · Agent</p>
+      <p class="crumb"><a href="/team/">← The team</a></p>
       <h1>Genie</h1>
       <p class="lede"><strong>Weekends and the family calendar.</strong></p>
-      <ul class="pills" style="--c: var(--store); --cb: var(--store-bg)"><li class="on">Behind Miya</li><li class="">Own bot since Aug 10</li></ul>
+      <p class="chips-row"><span class="st live">Live, through Miya since Aug 6 · own bot since Aug 10</span></p>
     </div>
   </div>
 </section>
 
-<section style="padding-top:8px; --c: var(--store); --cb: var(--store-bg)">
+<section class="tight" style="--c: var(--store); --cb: var(--store-bg)">
   <div class="wrap">
     <div class="facts">
-      <div class="fact"><h2>The problem</h2><p>"What should we do this weekend?" comes up every week, and the answer is buried in a dozen event pages nobody has time to read.</p></div>
+      <div class="fact"><h2>The problem</h2><p>“What should we do this weekend?” comes up every week, and the answer is buried in a dozen event pages nobody has time to read.</p></div>
       <div class="fact"><h2>Why I have it</h2><p>Genie reads them for us, plans the weekend around what we've already decided, and keeps a household calendar that schedules instead of just listing.</p></div>
       <div class="fact"><h2>What it does</h2><ul><li>Sends a daily digest of local events.</li><li>Plans weekends. If we already have a plan on file, it becomes the anchor and Genie fits around it.</li><li>Keeps a household calendar that never puts two things in one slot.</li><li>Tells us when its event feeds are stale or search is down, instead of guessing.</li></ul></div>
-      <div class="fact"><h2>Where it helped</h2><ul><li><b>121</b> event sources, <b>43</b> of them read in plain code with no model.</li><li>The first agent to start on its own front door and then join Miya. <b>It took a weekend.</b></li><li>The first agent held to the structured-output contract from day one, with no exemption.</li></ul></div>
+      <div class="fact"><h2>Where it helped</h2><ul><li><b>122</b> event sources, <b>50</b> of them read in plain code with no model (Oct 19).</li><li>Built on the shared platform in a weekend: same memory, same rules, same ledger, and a new job on top. Behind Miya since <b>Aug 6</b>; its own bot for the household since <b>Aug 10</b>.</li><li>The first agent required from day one to hand Miya its numbers as typed fields rather than prose, so the validator can check them.</li></ul></div>
     </div>
+    
   </div>
 </section>
 
 <section style="--c: var(--store); --cb: var(--store-bg)">
   <div class="wrap">
     <div class="section-head">
-      <p class="eyebrow">How it works</p>
-      <h2>One message, step by step</h2>
-      <p>Each step lights up in turn. The names are the real components in the code.</p>
+      <h2>How it works</h2>
+      <p>The steps, in the order a message meets them. The names are the real components in the code.</p>
     </div>
+    <div class="flow-wrap">
     <ol class="flow" style="--n:7">
-      <li style="--i:0"><b>Telegram</b>Its own bot, or through Miya.</li>
+      <li style="--i:0"><b>I ask</b>On Genie's own bot, or through Miya.</li>
       <li style="--i:1"><b>Household gate</b>Only paired phones get in.</li>
       <li style="--i:2"><b>Genie's intents</b>Matched in code: commands first, then plans.</li>
       <li style="--i:3"><b>Plan or digest</b>Live search for a plan; the events inventory for the digest.</li>
       <li style="--i:4"><b>Genie's rules</b>One thing per slot. At most six picks, three per source.</li>
-      <li style="--i:5"><b>Charter</b>Every write is checked before it happens.</li>
+      <li style="--i:5"><b>The Charter</b>Every write to the calendar is checked against the household's rules before it happens.</li>
       <li style="--i:6"><b>Reply</b>Sent as Genie wrote it, and recorded.</li>
     </ol>
+    <button class="replay" type="button" hidden>Replay</button>
+    </div>
   </div>
 </section>
 
-<section style="padding-top:8px; --c: var(--store); --cb: var(--store-bg)">
+<section class="tight" style="--c: var(--store); --cb: var(--store-bg)">
   <div class="wrap">
     <div class="facts">
       <div class="fact wide"><h2>Not built yet</h2><ul><li>It doesn't write back to our phones' calendars yet.</li><li>Per-person preferences and a way to settle disagreements between us are designed, not built.</li><li>The Friday nudge exists but is off.</li></ul>
         <div class="actions" style="margin-top:6px">
-          <a class="btn btn-ghost" href="https://github.com/modernthinkerbuilds/Rahat-Plane/tree/main/agents/genie">Read its code →</a>
+          <a class="btn btn-ghost" href="https://github.com/modernthinkerbuilds/Rahat-Plane/blob/main/specs/ARCHITECTURE.md#52-genie-its-own-bot-and-behind-miya">How it runs, in the architecture doc ↗</a>
+          <a class="btn btn-ghost" href="https://github.com/modernthinkerbuilds/Rahat-Plane/tree/main/agents/genie">Its folder in the repo ↗</a>
           
         </div>
       </div>
@@ -95,21 +102,22 @@
   </div>
 </section>
 
-<section style="padding-top:8px">
-  <div class="wrap agent-nav">
+<section class="tight">
+  <nav class="wrap agent-nav" aria-label="Agents">
     <a href="/team/huberman/">← Huberman</a>
     <a href="/team/">All agents</a>
     <a href="/team/bourdain/">Bourdain →</a>
-  </div>
+  </nav>
 </section>
 </main>
 <footer class="site-footer">
   <div class="wrap">
     <span>© 2026 Venkat Sadras · Views my own.</span>
     <nav aria-label="Elsewhere">
-      <a href="https://www.linkedin.com/in/venkatsadras/">LinkedIn</a>
-      <a href="https://github.com/modernthinkerbuilds">GitHub</a>
-      <a href="https://venkatsadras.substack.com">Substack</a>
+      <a href="https://www.linkedin.com/in/venkatsadras/">LinkedIn ↗</a>
+      <a href="https://github.com/modernthinkerbuilds">GitHub ↗</a>
+      <a href="https://venkatsadras.substack.com">Substack ↗</a>
+      <a href="https://venkatsadras.substack.com/subscribe">Subscribe ↗</a>
       <a href="https://venkatsadras.substack.com/feed">RSS</a>
     </nav>
   </div>

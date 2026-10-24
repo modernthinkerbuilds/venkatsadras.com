@@ -4,13 +4,16 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Kobe: The numbers. · Venkat Sadras</title>
-<meta name="description" content="Kobe is one of the AI agents on Venkat Sadras's team. "Where am I this week?" deserves a number, not a model's guess.">
+<meta name="description" content="Kobe is one of the AI agents on Venkat Sadras&#x27;s team. “Where am I this week?” deserves a number, not a model&#x27;s guess.">
 <link rel="canonical" href="https://venkatsadras.com/team/kobe/">
 <meta property="og:type" content="website">
+<meta property="og:site_name" content="Venkat Sadras">
 <meta property="og:title" content="Kobe: The numbers. · Venkat Sadras">
-<meta property="og:description" content="Kobe is one of the AI agents on Venkat Sadras's team. "Where am I this week?" deserves a number, not a model's guess.">
+<meta property="og:description" content="Kobe is one of the AI agents on Venkat Sadras&#x27;s team. “Where am I this week?” deserves a number, not a model&#x27;s guess.">
 <meta property="og:url" content="https://venkatsadras.com/team/kobe/">
-<meta property="og:image" content="https://venkatsadras.com/assets/img/rahat-map.png">
+<meta property="og:image" content="https://venkatsadras.com/assets/img/og-card.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
 <meta name="twitter:card" content="summary_large_image">
 <meta name="theme-color" content="#eef1f7" media="(prefers-color-scheme: light)">
 <meta name="theme-color" content="#0d121a" media="(prefers-color-scheme: dark)">
@@ -19,15 +22,15 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo:wght@600;700;800&family=Source+Sans+3:wght@400;600&family=IBM+Plex+Mono:wght@400;500&display=swap">
-<link rel="stylesheet" href="/assets/site.css">
-<script src="/assets/site.js" defer></script>
+<link rel="stylesheet" href="/assets/site.css?v=3">
+<script src="/assets/site.js?v=3" defer></script>
 </head>
 <body>
 <a class="skip" href="#main">Skip to content</a>
 <header class="site-header">
   <div class="wrap">
     <a class="brand" href="/">Venkat Sadras</a>
-    <button class="menu-toggle" aria-expanded="false" aria-controls="nav">Menu</button>
+    <button class="menu-toggle" aria-expanded="false" aria-controls="nav"><span>Menu</span></button>
     <nav class="nav" id="nav" aria-label="Main">
       <a href="/miya/">Miya</a>
       <a href="/team/" aria-current="page">Team</a>
@@ -35,42 +38,42 @@
       <a href="/writing/">Writing</a>
       <a href="/demos/">Demos</a>
       <a href="/about/">About</a>
-      <a class="btn btn-primary" href="https://venkatsadras.substack.com/subscribe">Subscribe</a>
+      <a class="btn btn-primary" href="https://www.linkedin.com/in/venkatsadras/">LinkedIn ↗</a>
     </nav>
   </div>
 </header>
 <main id="main">
 <section class="hero" style="--c: var(--code); --cb: var(--code-bg)">
   <div class="wrap agent-hero">
-    <img src="/assets/team/kobe.jpg" width="200" height="200" alt="Kobe, drawn as an intense badger in a black hoodie on a bench in an empty gym before dawn, a basketball under one paw, a clipboard in the other, a stopwatch and post-workout snacks beside it" class="round">
+    <img src="/assets/team/kobe.jpg" width="200" height="200" alt="Kobe, a badger in a black hoodie with a clipboard, a stopwatch and a basketball" class="round">
     <div>
-      <p class="eyebrow"><a href="/team/">The team</a> · Agent</p>
+      <p class="crumb"><a href="/team/">← The team</a></p>
       <h1>Kobe</h1>
       <p class="lede"><strong>The numbers.</strong></p>
-      <ul class="pills" style="--c: var(--code); --cb: var(--code-bg)"><li class="on">Behind Miya</li><li class="">Live</li></ul>
+      <p class="chips-row"><span class="st live">Live, through Miya</span></p>
     </div>
   </div>
 </section>
 
-<section style="padding-top:8px; --c: var(--code); --cb: var(--code-bg)">
+<section class="tight" style="--c: var(--code); --cb: var(--code-bg)">
   <div class="wrap">
     <div class="facts">
-      <div class="fact"><h2>The problem</h2><p>"Where am I this week?" deserves a number, not a model's guess.</p></div>
+      <div class="fact"><h2>The problem</h2><p>“Where am I this week?” deserves a number, not a model's guess.</p></div>
       <div class="fact"><h2>Why I have it</h2><p>Training questions have exact answers in the data. Kobe computes them in code, so the answer is the same every time and costs nothing to produce.</p></div>
-      <div class="fact"><h2>What it does</h2><ul><li>Reads the watch data and what the gym has programmed for the week.</li><li>Answers the week, today, the plan and what's next, computed in code.</li><li>Hands workout design to Fraser and the wind-down to Huberman.</li></ul></div>
-      <div class="fact"><h2>Where it helped</h2><ul><li>Everyday asks (the week, yesterday's numbers, tomorrow's workout) are answered in code with <b>no model call</b>, checked Oct 17.</li><li>Before Kobe had one ordered dispatcher, <b>7 of 10</b> routing layers needed fixes within 48 hours for the same kind of question.</li></ul></div>
+      <div class="fact"><h2>What it does</h2><ul><li>Reads the watch data and what the gym has programmed for the week.</li><li>Answers the week, today, the plan and what's next, computed in code.</li><li>Hands workout design to Fraser and the evening wind-down to Huberman.</li></ul></div>
+      <div class="fact"><h2>Where it helped</h2><ul><li>Everyday asks (the week, yesterday's numbers, tomorrow's workout) are answered in code with <b>no model call</b>, checked Oct 17.</li><li>Before Kobe answered from one ordered list of commands, the same kind of question kept breaking its routing: seven of its ten routing layers needed a fix within 48 hours. Now there is one list.</li></ul></div>
     </div>
+    
   </div>
 </section>
 
-<section style="padding-top:8px; --c: var(--code); --cb: var(--code-bg)">
+<section class="tight">
   <div class="wrap">
     <div class="who">
-      <img src="/assets/img/deadlift.jpg" width="720" height="900" alt="Venkat standing up with a loaded deadlift in a CrossFit gym" loading="lazy">
+      <img src="/assets/img/deadlift.jpg" width="720" height="900" alt="Venkat standing up a deadlift" loading="lazy">
       <div>
-        <p class="eyebrow">Who it keeps score for</p>
-        <h2>Every rep ends up as a number.</h2>
-        <p class="muted">Kobe turns days like this into the week's numbers: what I did, how it compares with the plan, and what's next, computed in code from the watch. CrossFit is my reset; Kobe makes sure the numbers behind it are right.</p>
+        <h2>Every rep ends up as a number</h2>
+        <p class="muted">Kobe turns days like this into the week's numbers: what I did, how it compares with the plan, and what's next, computed in code from the watch data. CrossFit is my reset; Kobe makes sure the numbers behind it are right.</p>
       </div>
     </div>
   </div>
@@ -78,28 +81,29 @@
 <section style="--c: var(--code); --cb: var(--code-bg)">
   <div class="wrap">
     <div class="section-head">
-      <p class="eyebrow">How it works</p>
-      <h2>One message, step by step</h2>
-      <p>Each step lights up in turn. The names are the real components in the code.</p>
+      <h2>How it works</h2>
+      <p>The steps, in the order a message meets them. The names are the real components in the code.</p>
     </div>
-    <ol class="flow" style="--n:7">
-      <li style="--i:0"><b>Telegram</b>I ask a numbers question.</li>
-      <li style="--i:1"><b>Miya's runner</b>Gives it a trace id.</li>
-      <li style="--i:2"><b>The ladder</b>Recognizes a numbers question in code.</li>
-      <li style="--i:3"><b>Kobe's dispatcher</b>One ordered table of commands, all in code.</li>
-      <li style="--i:4"><b>The vault</b>Watch data and the gym's week, from one SQLite file at home.</li>
-      <li style="--i:5"><b>Validator</b>Checks the reply against what's true.</li>
-      <li style="--i:6"><b>Word for word</b>Exact numbers go out exactly as computed.</li>
+    <div class="flow-wrap">
+    <ol class="flow" style="--n:5">
+      <li style="--i:0"><b>I ask a numbers question</b>“Where am I this week?”</li>
+      <li style="--i:1"><b>A rule in code claims it</b>No model is called.</li>
+      <li style="--i:2"><b>Kobe's dispatcher</b>One ordered list of commands, all in code.</li>
+      <li style="--i:3"><b>The data</b>Watch data and the gym's week, from one SQLite file at home.</li>
+      <li style="--i:4"><b>Word for word</b>Exact numbers go out exactly as computed, past the validator.</li>
     </ol>
+    <button class="replay" type="button" hidden>Replay</button>
+    </div>
   </div>
 </section>
 
-<section style="padding-top:8px; --c: var(--code); --cb: var(--code-bg)">
+<section class="tight" style="--c: var(--code); --cb: var(--code-bg)">
   <div class="wrap">
     <div class="facts">
       <div class="fact wide"><h2>Not built yet</h2><ul><li>Kobe's model calls are logged, but not yet held to the shared budget gate.</li></ul>
         <div class="actions" style="margin-top:6px">
-          <a class="btn btn-ghost" href="https://github.com/modernthinkerbuilds/Rahat-Plane/tree/main/agents/the_scientist">Read its code →</a>
+          <a class="btn btn-ghost" href="https://github.com/modernthinkerbuilds/Rahat-Plane/blob/main/specs/ARCHITECTURE.md#6-the-agents">How it runs, in the architecture doc ↗</a>
+          <a class="btn btn-ghost" href="https://github.com/modernthinkerbuilds/Rahat-Plane/tree/main/agents/the_scientist">Its folder in the repo ↗</a>
           
         </div>
       </div>
@@ -107,21 +111,22 @@
   </div>
 </section>
 
-<section style="padding-top:8px">
-  <div class="wrap agent-nav">
+<section class="tight">
+  <nav class="wrap agent-nav" aria-label="Agents">
     <a href="/miya/">← Miya</a>
     <a href="/team/">All agents</a>
     <a href="/team/fraser/">Fraser →</a>
-  </div>
+  </nav>
 </section>
 </main>
 <footer class="site-footer">
   <div class="wrap">
     <span>© 2026 Venkat Sadras · Views my own.</span>
     <nav aria-label="Elsewhere">
-      <a href="https://www.linkedin.com/in/venkatsadras/">LinkedIn</a>
-      <a href="https://github.com/modernthinkerbuilds">GitHub</a>
-      <a href="https://venkatsadras.substack.com">Substack</a>
+      <a href="https://www.linkedin.com/in/venkatsadras/">LinkedIn ↗</a>
+      <a href="https://github.com/modernthinkerbuilds">GitHub ↗</a>
+      <a href="https://venkatsadras.substack.com">Substack ↗</a>
+      <a href="https://venkatsadras.substack.com/subscribe">Subscribe ↗</a>
       <a href="https://venkatsadras.substack.com/feed">RSS</a>
     </nav>
   </div>

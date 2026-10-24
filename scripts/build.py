@@ -30,10 +30,12 @@ SERIES = ROOT / "data" / "series.json"
 # Series keys, in the order the filter chips show them.
 SERIES_LABELS = {
     "where-do-we-eat": "Where do we eat?",
-    "agent-clearance": "Agent Clearance",
     "life-with-agents": "Life with agents",
     "essays": "Essays",
 }
+
+# The search box and the series chips appear once there is enough to filter.
+MIN_POSTS_FOR_SEARCH = 3
 
 
 def load_json(path, default):
@@ -100,29 +102,35 @@ def render_item(post, mapping):
 
 
 EMPTY_LIST = (
-    '<div class="empty"><strong>Episode 1 of "Where do we eat?" publishes this week.</strong> '
-    'It will appear here the day it goes out. '
-    '<a href="https://venkatsadras.substack.com/subscribe">Subscribe to get it by email</a>.</div>'
+    '<div class="empty"><strong>Episode 1 of “Where do we eat?” is in progress.</strong> '
+    'It appears here the day it goes out. '
+    '<a href="https://venkatsadras.substack.com/subscribe">Subscribe to get it by email ↗</a>.</div>'
 )
 
-EMPTY_LATEST = (
-    '<p class="eyebrow">Latest writing</p>'
-    '<h3>Where do we eat?</h3>'
-    '<p>My food agent wasn\'t ready for our family trip, so I made the trip its test. '
-    'Episode 1 publishes this week.</p>'
-    '<span class="go">Subscribe for Episode 1 →</span>'
-)
+
+def render_toolbar(posts, mapping):
+    """Search box and one chip per series that actually has a post."""
+    keys = [k for k in SERIES_LABELS if any(series_of(p, mapping) == k for p in posts)]
+    chips = "".join(
+        f'<button class="chip" data-series="{k}" aria-pressed="false">{html.escape(SERIES_LABELS[k])}</button>'
+        for k in keys)
+    return (
+        '<div class="toolbar">'
+        '<input class="search" type="search" placeholder="Search posts" aria-label="Search posts">'
+        '<div class="chips" role="group" aria-label="Filter by series">'
+        '<button class="chip" data-series="all" aria-pressed="true">All</button>' + chips + "</div></div>"
+    )
 
 
 def render_latest(post, mapping):
     e = html.escape
     key = series_of(post, mapping)
     return (
-        f'<p class="eyebrow">Latest writing · {e(fmt_date(post.get("date", "")))}</p>'
-        f'<h3>{e(post["title"])}</h3>'
+        f'<a class="item latest" href="{e(post["url"])}">'
+        f'<p class="meta">Latest · {e(fmt_date(post.get("date", "")))} · {e(SERIES_LABELS.get(key, "Essays"))}</p>'
+        f'<span class="title">{e(post["title"])}</span>'
         + (f'<p>{e(post["summary"])}</p>' if post.get("summary") else "")
-        + f'<span class="go">Read it on Substack →</span>'
-        + f'<!-- series:{e(key)} -->'
+        + '<span class="go">Read it on Substack ↗</span></a>'
     )
 
 
@@ -145,16 +153,12 @@ def main():
 
     writing = ROOT / "writing" / "index.html"
     items = "\n".join(render_item(p, mapping) for p in posts)
-    body = f'\n<ul class="list" data-filterable>\n{items}\n</ul>\n' if posts else f"\n{EMPTY_LIST}\n"
+    toolbar = render_toolbar(posts, mapping) if len(posts) >= MIN_POSTS_FOR_SEARCH else ""
+    body = f'\n{toolbar}\n<ul class="list" data-filterable>\n{items}\n</ul>\n' if posts else f"\n{EMPTY_LIST}\n"
     writing.write_text(replace_between(writing.read_text(encoding="utf-8"), "POSTS", body), encoding="utf-8")
 
     home = ROOT / "index.html"
-    if posts:
-        latest = (f'\n<a class="card" style="--c: var(--model); --cb: var(--model-bg)" href="{html.escape(posts[0]["url"])}">'
-                  f'{render_latest(posts[0], mapping)}</a>\n')
-    else:
-        latest = ('\n<a class="card" style="--c: var(--model); --cb: var(--model-bg)" '
-                  f'href="https://venkatsadras.substack.com/subscribe">{EMPTY_LATEST}</a>\n')
+    latest = f"\n{render_latest(posts[0], mapping)}\n" if posts else "\n"
     home.write_text(replace_between(home.read_text(encoding="utf-8"), "LATEST", latest), encoding="utf-8")
     print(f"{len(posts)} posts rendered")
 

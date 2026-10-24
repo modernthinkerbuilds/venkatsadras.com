@@ -4,13 +4,16 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Demos · Venkat Sadras</title>
-<meta name="description" content="A short, dated demo every two weeks of something that shipped in Rahat, with what's real and what isn't.">
+<meta name="description" content="A short, dated demo every two weeks of something that shipped in Rahat, with what&#x27;s real and what isn&#x27;t.">
 <link rel="canonical" href="https://venkatsadras.com/demos/">
 <meta property="og:type" content="website">
+<meta property="og:site_name" content="Venkat Sadras">
 <meta property="og:title" content="Demos · Venkat Sadras">
-<meta property="og:description" content="A short, dated demo every two weeks of something that shipped in Rahat, with what's real and what isn't.">
+<meta property="og:description" content="A short, dated demo every two weeks of something that shipped in Rahat, with what&#x27;s real and what isn&#x27;t.">
 <meta property="og:url" content="https://venkatsadras.com/demos/">
-<meta property="og:image" content="https://venkatsadras.com/assets/img/rahat-map.png">
+<meta property="og:image" content="https://venkatsadras.com/assets/img/og-card.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
 <meta name="twitter:card" content="summary_large_image">
 <meta name="theme-color" content="#eef1f7" media="(prefers-color-scheme: light)">
 <meta name="theme-color" content="#0d121a" media="(prefers-color-scheme: dark)">
@@ -19,15 +22,15 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo:wght@600;700;800&family=Source+Sans+3:wght@400;600&family=IBM+Plex+Mono:wght@400;500&display=swap">
-<link rel="stylesheet" href="/assets/site.css">
-<script src="/assets/site.js" defer></script>
+<link rel="stylesheet" href="/assets/site.css?v=3">
+<script src="/assets/site.js?v=3" defer></script>
 </head>
 <body>
 <a class="skip" href="#main">Skip to content</a>
 <header class="site-header">
   <div class="wrap">
     <a class="brand" href="/">Venkat Sadras</a>
-    <button class="menu-toggle" aria-expanded="false" aria-controls="nav">Menu</button>
+    <button class="menu-toggle" aria-expanded="false" aria-controls="nav"><span>Menu</span></button>
     <nav class="nav" id="nav" aria-label="Main">
       <a href="/miya/">Miya</a>
       <a href="/team/">Team</a>
@@ -35,52 +38,44 @@
       <a href="/writing/">Writing</a>
       <a href="/demos/" aria-current="page">Demos</a>
       <a href="/about/">About</a>
-      <a class="btn btn-primary" href="https://venkatsadras.substack.com/subscribe">Subscribe</a>
+      <a class="btn btn-primary" href="https://www.linkedin.com/in/venkatsadras/">LinkedIn ↗</a>
     </nav>
   </div>
 </header>
 <main id="main">
 <section class="hero">
   <div class="wrap">
-    <p class="eyebrow">Demos</p>
-    <h1>Something that shipped, every two weeks.</h1>
-    <p class="lede">Each demo is short and dated, and says plainly <strong>what's real and what isn't.</strong> No mockups.</p>
+    <h1>Demos</h1>
+    <p class="lede">One short, dated demo every two weeks from Nov 1, of something that shipped. Each says plainly <strong>what's real and what isn't.</strong></p>
   </div>
 </section>
 
-<section style="padding-top:12px">
+<section class="tight">
   <div class="wrap">
     <ul class="list">
-      <li class="empty"><strong>Next demo: early November.</strong> <a href="https://venkatsadras.substack.com/subscribe">Subscribe</a> to hear when it's out.</li>
+      <li class="empty"><strong>Next demo: Nov 1.</strong> New demos are announced on <a href="https://venkatsadras.substack.com">Substack ↗</a>.</li>
       <li>
         <article class="demo" id="00">
-          <div class="media">
-            <a href="https://modernthinkerbuilds.github.io/Rahat-Plane/specs/RAHAT-ARCHITECTURE.html"><img src="/assets/img/rahat-map.gif" width="960" height="547" alt="A message moving through Rahat's layers, from Telegram to the agent that answers it" loading="lazy"></a>
+          <div class="media figure demo-media">
+            <video class="map" controls muted loop playsinline preload="none" poster="/assets/img/rahat-map.png" width="960" height="546" aria-label="The Rahat map: a message goes from Telegram through Miya's rules to the agent that answers it, past the checks and into the shared record, animated">
+              <source src="/assets/img/rahat-map.webm" type="video/webm">
+              <source src="/assets/img/rahat-map.mp4" type="video/mp4">
+            </video>
+            <a class="still" href="https://modernthinkerbuilds.github.io/Rahat-Plane/specs/RAHAT-ARCHITECTURE.html"><img src="/assets/img/rahat-map.png" width="1268" height="722" alt="The Rahat map: a message goes from Telegram through Miya's rules to the agent that answers it, past the checks and into the shared record" loading="lazy"></a>
           </div>
           <div class="body">
-            <p class="meta eyebrow">Demo 00 · Oct 2026</p>
-            <h3>The system map, moving</h3>
-            <p class="muted">A <code>/week</code> message travels from Telegram through Miya's runner and the ladder of rules to Kobe, the agent that answers it, past the checks, the control plane and the memory.</p>
+            <p class="meta">Demo 00 · Oct 2026</p>
+            <h2>The system map, moving</h2>
+            <p class="muted">A <code>/week</code> message travels from Telegram through Miya's rules to Kobe, the agent that answers it, past the checks and into the record.</p>
             <ul class="kv">
               <li><span class="badge shipped">Real</span> Every box and every arrow is a component in the repo, in the order a message meets them.</li>
               <li><span class="badge notyet">Not live traffic</span> The motion is an animation of that path, not a recording of a real message.</li>
             </ul>
-            <div class="actions"><a class="btn btn-ghost" href="https://modernthinkerbuilds.github.io/Rahat-Plane/specs/RAHAT-ARCHITECTURE.html">Open the live page →</a></div>
+            <div class="actions"><a class="btn btn-ghost" href="https://modernthinkerbuilds.github.io/Rahat-Plane/specs/RAHAT-ARCHITECTURE.html">Open the live page ↗</a></div>
           </div>
         </article>
       </li>
     </ul>
-  </div>
-</section>
-<section>
-  <div class="wrap">
-    <div class="subscribe">
-      <div>
-        <h2>Get each new post by email</h2>
-        <p>The writing goes out on Substack. Every post also lands here, searchable.</p>
-      </div>
-      <a class="btn btn-primary" href="https://venkatsadras.substack.com/subscribe">Subscribe on Substack →</a>
-    </div>
   </div>
 </section>
 </main>
@@ -88,9 +83,10 @@
   <div class="wrap">
     <span>© 2026 Venkat Sadras · Views my own.</span>
     <nav aria-label="Elsewhere">
-      <a href="https://www.linkedin.com/in/venkatsadras/">LinkedIn</a>
-      <a href="https://github.com/modernthinkerbuilds">GitHub</a>
-      <a href="https://venkatsadras.substack.com">Substack</a>
+      <a href="https://www.linkedin.com/in/venkatsadras/">LinkedIn ↗</a>
+      <a href="https://github.com/modernthinkerbuilds">GitHub ↗</a>
+      <a href="https://venkatsadras.substack.com">Substack ↗</a>
+      <a href="https://venkatsadras.substack.com/subscribe">Subscribe ↗</a>
       <a href="https://venkatsadras.substack.com/feed">RSS</a>
     </nav>
   </div>

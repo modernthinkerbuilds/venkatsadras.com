@@ -1,29 +1,79 @@
-// venkatsadras.com — tiny progressive enhancements. Every page works without this file.
+// venkatsadras.com — small progressive enhancements. Every page works without this file.
 (function () {
-  // Mobile menu
+  var reduce = window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  var narrow = window.matchMedia && window.matchMedia('(max-width: 860px)').matches;
+
+  // Mobile menu: the button reads "Close" while open; Escape and a tap outside close it.
   var toggle = document.querySelector('.menu-toggle');
   var nav = document.getElementById('nav');
   if (toggle && nav) {
-    toggle.addEventListener('click', function () {
-      var open = nav.classList.toggle('open');
+    var label = toggle.querySelector('span') || toggle;
+    function setMenu(open) {
+      nav.classList.toggle('open', open);
       toggle.setAttribute('aria-expanded', open ? 'true' : 'false');
+      label.textContent = open ? 'Close' : 'Menu';
+    }
+    toggle.addEventListener('click', function () { setMenu(!nav.classList.contains('open')); });
+    document.addEventListener('keydown', function (e) {
+      if (e.key === 'Escape' && nav.classList.contains('open')) { setMenu(false); toggle.focus(); }
+    });
+    document.addEventListener('click', function (e) {
+      if (nav.classList.contains('open') && !nav.contains(e.target) && !toggle.contains(e.target)) setMenu(false);
     });
   }
 
-  // Agent flows: light up one step at a time
-  var reduce = window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  // Flows: the steps light up once, in order, when the list scrolls into view.
+  // Hover or focus pauses; Replay runs it again. On a phone it stays a plain list.
   Array.prototype.forEach.call(document.querySelectorAll('.flow'), function (flow) {
     var steps = flow.querySelectorAll('li');
-    if (!steps.length) return;
-    if (reduce) { steps[0].classList.add('on'); return; }
-    var k = 0;
-    steps[0].classList.add('on');
-    setInterval(function () {
-      steps[k].classList.remove('on');
-      k = (k + 1) % steps.length;
+    if (!steps.length || reduce || narrow) return;
+    var replay = flow.parentNode.querySelector('.replay');
+    var timer = null, k = -1, paused = false, played = false;
+
+    function clear() { Array.prototype.forEach.call(steps, function (s) { s.classList.remove('on'); }); }
+    function tick() {
+      if (paused) return;
+      if (k >= 0) steps[k].classList.remove('on');
+      k += 1;
+      if (k >= steps.length) { timer = null; played = true; if (replay) replay.hidden = false; return; }
       steps[k].classList.add('on');
-    }, 1100);
+      timer = setTimeout(tick, 1100);
+    }
+    function run() {
+      if (timer) clearTimeout(timer);
+      clear(); k = -1; paused = false; played = false;
+      if (replay) replay.hidden = true;
+      tick();
+    }
+    function resume() { if (paused && !played) { paused = false; timer = setTimeout(tick, 400); } }
+    flow.addEventListener('mouseenter', function () { paused = true; });
+    flow.addEventListener('mouseleave', resume);
+    flow.addEventListener('focusin', function () { paused = true; });
+    flow.addEventListener('focusout', resume);
+    if (replay) replay.addEventListener('click', run);
+
+    if ('IntersectionObserver' in window) {
+      var io = new IntersectionObserver(function (entries) {
+        entries.forEach(function (en) { if (en.isIntersecting) { io.disconnect(); run(); } });
+      }, { threshold: 0.4 });
+      io.observe(flow);
+    } else {
+      run();
+    }
   });
+
+  // The map video: muted and looping, so it may start on its own once it is in view.
+  if (!reduce && 'IntersectionObserver' in window) {
+    Array.prototype.forEach.call(document.querySelectorAll('video.map'), function (v) {
+      var vo = new IntersectionObserver(function (entries) {
+        entries.forEach(function (en) {
+          if (en.isIntersecting) { var p = v.play(); if (p && p.catch) p.catch(function () {}); }
+          else v.pause();
+        });
+      }, { threshold: 0.5 });
+      vo.observe(v);
+    });
+  }
 
   // Search + series filter on lists that opt in with [data-filterable]
   var list = document.querySelector('[data-filterable]');

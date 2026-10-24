@@ -3,14 +3,17 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Rahat — the platform under Miya · Venkat Sadras</title>
-<meta name="description" content="Rahat is the open-source platform under Miya, a personal AI agent: specialist agents, checks in the path, a harness every answer runs through, and a record of every decision.">
+<title>Rahat, the platform under Miya · Venkat Sadras</title>
+<meta name="description" content="Rahat is the open-source platform under Miya, a personal AI agent: specialist agents, checks in code on the way out, a harness for new agents, and a record of every decision.">
 <link rel="canonical" href="https://venkatsadras.com/rahat/">
 <meta property="og:type" content="website">
-<meta property="og:title" content="Rahat — the platform under Miya · Venkat Sadras">
-<meta property="og:description" content="Rahat is the open-source platform under Miya, a personal AI agent: specialist agents, checks in the path, a harness every answer runs through, and a record of every decision.">
+<meta property="og:site_name" content="Venkat Sadras">
+<meta property="og:title" content="Rahat, the platform under Miya · Venkat Sadras">
+<meta property="og:description" content="Rahat is the open-source platform under Miya, a personal AI agent: specialist agents, checks in code on the way out, a harness for new agents, and a record of every decision.">
 <meta property="og:url" content="https://venkatsadras.com/rahat/">
-<meta property="og:image" content="https://venkatsadras.com/assets/img/rahat-map.png">
+<meta property="og:image" content="https://venkatsadras.com/assets/img/og-card.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
 <meta name="twitter:card" content="summary_large_image">
 <meta name="theme-color" content="#eef1f7" media="(prefers-color-scheme: light)">
 <meta name="theme-color" content="#0d121a" media="(prefers-color-scheme: dark)">
@@ -19,15 +22,15 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo:wght@600;700;800&family=Source+Sans+3:wght@400;600&family=IBM+Plex+Mono:wght@400;500&display=swap">
-<link rel="stylesheet" href="/assets/site.css">
-<script src="/assets/site.js" defer></script>
+<link rel="stylesheet" href="/assets/site.css?v=3">
+<script src="/assets/site.js?v=3" defer></script>
 </head>
 <body>
 <a class="skip" href="#main">Skip to content</a>
 <header class="site-header">
   <div class="wrap">
     <a class="brand" href="/">Venkat Sadras</a>
-    <button class="menu-toggle" aria-expanded="false" aria-controls="nav">Menu</button>
+    <button class="menu-toggle" aria-expanded="false" aria-controls="nav"><span>Menu</span></button>
     <nav class="nav" id="nav" aria-label="Main">
       <a href="/miya/">Miya</a>
       <a href="/team/">Team</a>
@@ -35,109 +38,116 @@
       <a href="/writing/">Writing</a>
       <a href="/demos/">Demos</a>
       <a href="/about/">About</a>
-      <a class="btn btn-primary" href="https://venkatsadras.substack.com/subscribe">Subscribe</a>
+      <a class="btn btn-primary" href="https://www.linkedin.com/in/venkatsadras/">LinkedIn ↗</a>
     </nav>
   </div>
 </header>
 <main id="main">
 <section class="hero">
   <div class="wrap">
-    <p class="eyebrow">Rahat · open source · Apache 2.0</p>
-    <h1>The platform under Miya.</h1>
-    <p class="lede">Miya is the one I talk to. Rahat is everything underneath: <strong>specialist agents that prove themselves on their own front door before they join Miya, checks in the path, a harness every answer runs through, and a record of every decision.</strong> It runs on a Mac mini at home, around the clock.</p>
+    <p class="eyebrow">Open source · Apache 2.0 · Mac mini at home</p>
+    <h1>Rahat</h1>
+    <p class="lede">Miya is the one I talk to. Rahat is everything underneath: <strong>the specialist agents, the checks between an answer and me, the harness Bourdain's answers run through, and a record of every decision.</strong> It runs around the clock on a Mac mini at home.</p>
     <figure class="figure">
-      <a href="https://modernthinkerbuilds.github.io/Rahat-Plane/specs/RAHAT-ARCHITECTURE.html" aria-label="Open the live, interactive Rahat architecture page">
-        <img src="/assets/img/rahat-map.gif" width="960" height="547" alt="Rahat end to end: a message travels from Telegram through Miya's runner and the routing ladder to the agent that answers it, with the checks, the control plane and the memory around it">
-      </a>
-      <figcaption><span>A message moving through Rahat, from Telegram to the agent that answers it.</span><a href="https://modernthinkerbuilds.github.io/Rahat-Plane/specs/RAHAT-ARCHITECTURE.html">Open the live page →</a></figcaption>
+      <video class="map" controls muted loop playsinline preload="none" poster="/assets/img/rahat-map.png" width="960" height="546" aria-label="The Rahat map: a message goes from Telegram through Miya's rules to the agent that answers it, past the checks and into the shared record, animated">
+        <source src="/assets/img/rahat-map.webm" type="video/webm">
+        <source src="/assets/img/rahat-map.mp4" type="video/mp4">
+      </video>
+      <a class="still" href="https://modernthinkerbuilds.github.io/Rahat-Plane/specs/RAHAT-ARCHITECTURE.html"><img src="/assets/img/rahat-map.png" width="1268" height="722" alt="The Rahat map: a message goes from Telegram through Miya's rules to the agent that answers it, past the checks and into the shared record" loading="lazy"></a>
+      <figcaption><span>A <code>/week</code> message moving through Rahat, from Telegram to Kobe, the agent that answers it.</span><a href="https://modernthinkerbuilds.github.io/Rahat-Plane/specs/RAHAT-ARCHITECTURE.html">Open the live page ↗</a></figcaption>
     </figure>
     <ul class="proof" aria-label="Rahat in numbers">
-      <li><b>6</b>agents</li>
-      <li><b>3</b>front doors</li>
-      <li><b>4,209</b>tests</li>
-      <li><b>72</b>real asks in the eval set</li>
-      <li><b>7,408</b>decisions logged</li>
+      <li><b>6</b> agents</li>
+      <li><b>3</b> chat bots</li>
+      <li><b>4,209</b> tests</li>
+      <li><b>86</b> real asks in the eval sets</li>
+      <li><b>7,408</b> decisions logged</li>
     </ul>
-    <p class="asof">Counts as of Oct 17, 2026. Every one is in the repo.</p>
+    <p class="asof">Agents and tests counted in <a href="https://github.com/modernthinkerbuilds/Rahat-Plane">the repo</a> on Oct 17, 2026; the eval sets (Oct 17) and the decision ledger (Oct 14) are private, so those are my counts.</p>
   </div>
 </section>
 
-<section>
+<section class="tight">
+  <div class="wrap narrow prose">
+    <h2>Personal scale, real problems</h2>
+    <p>Rahat is not enterprise software. But a fluent agent that's confidently wrong, agents that disagree, a decision you can't prove and an evaluator you can't trust are the problems a company hits the day it runs a fleet. The same parts have company names.</p>
+    <table class="tbl">
+      <thead><tr><th scope="col">In my house</th><th scope="col">In a company</th></tr></thead>
+      <tbody>
+      <tr><td><b>The Charter.</b> Rules every write and nudge passes before it happens: quiet hours, recovery blocks, vetoes. Every verdict logged.</td><td>Policy engine</td></tr>
+      <tr><td><b>The decision ledger.</b> One row per decision: agent, rule, latency, cost.</td><td>Audit trail</td></tr>
+      <tr><td><b>Private golden sets, public synthetic twins.</b> The family's real asks stay private; the public tests run on look-alikes.</td><td>Evals without exposing user data</td></tr>
+      <tr><td><b>The household gate.</b> Only paired phones get in.</td><td>Access control</td></tr>
+      <tr><td><b>The private-words gate.</b> A push that would publish a name, an address, a token or a chat id is refused.</td><td>Leak prevention</td></tr>
+      </tbody>
+    </table>
+    <p class="muted">Gaps I know about are pinned as tests marked <code>SAFETY TARGET</code> and expected to fail, so each one stays named in the suite until it's closed.</p>
+  </div>
+</section>
+
+<section class="tight">
   <div class="wrap">
     <div class="cards">
-      <a class="card" style="--c: var(--code); --cb: var(--code-bg)" href="https://modernthinkerbuilds.github.io/Rahat-Plane/specs/RAHAT-ARCHITECTURE.html">
-        <span class="tag">Interactive</span>
-        <h3>See it move</h3>
+      <a class="card" href="https://modernthinkerbuilds.github.io/Rahat-Plane/specs/RAHAT-ARCHITECTURE.html">
+        <h2>See it move</h2>
         <p>The whole system on one page. Tap any box, or watch a message travel.</p>
-        <span class="go">Open the map →</span>
+        <span class="go">Open the map ↗</span>
       </a>
-      <a class="card" style="--c: var(--judge); --cb: var(--judge-bg)" href="https://modernthinkerbuilds.github.io/Rahat-Plane/specs/ADR-018.html">
-        <span class="tag">Interactive</span>
-        <h3>Inside one agent</h3>
-        <p>The eight-step harness every answer runs through, from understanding the ask to recording the run.</p>
-        <span class="go">Walk the harness →</span>
+      <a class="card" href="https://modernthinkerbuilds.github.io/Rahat-Plane/specs/ADR-018.html">
+        <h2>Inside one agent</h2>
+        <p>The eight-step harness Bourdain's answers run through, from understanding the ask to recording the run.</p>
+        <span class="go">Walk the harness ↗</span>
       </a>
-      <a class="card" style="--c: var(--store); --cb: var(--store-bg)" href="https://github.com/modernthinkerbuilds/Rahat-Plane">
-        <span class="tag">GitHub</span>
-        <h3>The code</h3>
-        <p>The architecture, the decision records and the tests. Open source under Apache 2.0.</p>
-        <span class="go">Read the code →</span>
+      <a class="card" href="https://github.com/modernthinkerbuilds/Rahat-Plane">
+        <h2>The code</h2>
+        <p>The architecture, the decision records and the tests. Apache 2.0.</p>
+        <span class="go">Open the repo ↗</span>
       </a>
     </div>
   </div>
 </section>
 
 <section>
-  <div class="wrap">
-    <div class="section-head">
-      <p class="eyebrow">Who runs on it</p>
-      <h2>The team</h2>
-      <p>Miya leads. Each agent has its own page: the problem, what it does, where it helped, and its flow, step by step.</p>
+  <div class="wrap prose">
+    <h2>What's running today</h2>
+    <p class="muted">Each agent reaches me through Telegram. Three have a chat bot of their own (Miya, Genie, Bourdain); the rest answer through Miya. Dates are when each count was taken.</p>
+    <div class="tbl-scroll">
+    <table class="tbl running">
+      <thead><tr><th scope="col">What</th><th scope="col">Status</th><th scope="col">As of</th><th scope="col">Code</th></tr></thead>
+      <tbody>
+      <tr><th scope="row">A validator on Miya's replies</th><td>Live. Seven checks against the facts on record; the reply is rewritten before it sends.</td><td class="when">Oct 17</td><td><a href="https://github.com/modernthinkerbuilds/Rahat-Plane/blob/main/new_plane/miya_runner/validator.py">validator.py</a></td></tr>
+      <tr><th scope="row">Fraser's workout contract</th><td>Live. Ten checks in code and one repair pass; anything still unverified is named in the reply.</td><td class="when">since Oct 11</td><td><a href="https://github.com/modernthinkerbuilds/Rahat-Plane/blob/main/agents/fraser/contract.py">contract.py</a></td></tr>
+      <tr><th scope="row">The harness<span class="def">One eight-step loop an answer runs through, owned by the platform rather than the agent.</span></th><td>Bourdain's answers run through it. Fraser uses its contract step.</td><td class="when">since Oct 4</td><td><a href="https://modernthinkerbuilds.github.io/Rahat-Plane/specs/ADR-018.html">Inside one agent ↗</a></td></tr>
+      <tr><th scope="row">The judge<span class="def">A second model that grades what code can't, like taste and fit.</span></th><td>Shadow. 214 verdicts recorded and none acted on; it has 3 of the 50 labels of mine it needs before it gets a vote.</td><td class="when">Oct 17</td><td><a href="https://github.com/modernthinkerbuilds/Rahat-Plane/blob/main/core/judge.py">judge.py</a></td></tr>
+      <tr><th scope="row">Knowledge with receipts<span class="def">Each fact carries where it came from and when.</span></th><td>326 places and 3,397 facts in Bourdain's knowledge base, each with its source and the date it was read.</td><td class="when">Oct 14</td><td><a href="https://github.com/modernthinkerbuilds/Rahat-Plane/tree/main/agents/bourdain">agents/bourdain/</a></td></tr>
+      <tr><th scope="row">Replays for $0<span class="def">Every model and tool call is recorded against its request, so a run replays with no network and no bill.</span></th><td>The golden sets, 86 real asks (72 food, 14 weekend), stay private. The public tests run on synthetic twins, look-alikes with nothing real in them.</td><td class="when">Oct 17</td><td><a href="https://github.com/modernthinkerbuilds/Rahat-Plane/blob/main/core/cassette.py">cassette.py</a></td></tr>
+      <tr><th scope="row">The decision ledger</th><td>7,408 rows: which agent, which rule, how long, what it cost.</td><td class="when">Oct 14</td><td><a href="https://github.com/modernthinkerbuilds/Rahat-Plane/blob/main/core/decisions.py">decisions.py</a></td></tr>
+      <tr><th scope="row">Tests</th><td>4,209 in the full suite. The unit, contract and regression layers run before every push.</td><td class="when">Oct 17</td><td><a href="https://github.com/modernthinkerbuilds/Rahat-Plane/tree/main/tests">tests/</a></td></tr>
+      </tbody>
+    </table>
     </div>
-    <ul class="wall">
-<li class="lead"><a href="/miya/" style="--c: var(--pulse); --cb: var(--code-bg)"><img src="/assets/team/miya.jpg" width="112" height="112" alt="" class="round"><span class="nm">Miya</span><span class="rl">The one I talk to. Leads the team.</span><span class="st">Lead</span></a></li>
-<li><a href="/team/kobe/" style="--c: var(--code); --cb: var(--code-bg)"><img src="/assets/team/kobe.jpg" width="112" height="112" alt="" class="round"><span class="nm">Kobe</span><span class="rl">The numbers.</span><span class="st">Behind Miya</span></a></li>
-<li><a href="/team/fraser/" style="--c: var(--model); --cb: var(--model-bg)"><img src="/assets/team/fraser.jpg" width="112" height="112" alt="" class="round"><span class="nm">Fraser</span><span class="rl">Designs workouts.</span><span class="st">Behind Miya</span></a></li>
-<li><a href="/team/huberman/" style="--c: var(--judge); --cb: var(--judge-bg)"><img src="/assets/team/huberman.jpg" width="112" height="112" alt="" class="round"><span class="nm">Huberman</span><span class="rl">The evening wind-down.</span><span class="st">Behind Miya</span></a></li>
-<li><a href="/team/genie/" style="--c: var(--store); --cb: var(--store-bg)"><img src="/assets/team/genie.jpg" width="112" height="112" alt="" class="round"><span class="nm">Genie</span><span class="rl">Weekends and the family calendar.</span><span class="st">Behind Miya</span></a></li>
-<li><a href="/team/bourdain/" style="--c: var(--plane); --cb: var(--plane-bg)"><img src="/assets/team/bourdain.jpg" width="112" height="112" alt="" class="round"><span class="nm">Bourdain</span><span class="rl">Where do we eat?</span><span class="st">Own bot</span></a></li>
-</ul>
   </div>
 </section>
 
-<section>
+<section class="tight">
   <div class="wrap narrow prose">
-    <p class="eyebrow">What's running today</p>
-    <h2>Checks in the path, not requests in the prompt</h2>
-    <ul>
-      <li><strong>A validator on the way out.</strong> Miya's replies are checked against what's actually true, with seven checks, and rewritten before they send. Fraser's workout designs pass a 10-point contract in code: one repair if something fails, and if it still fails, the reply says what isn't verified.</li>
-      <li><strong>A harness for agents.</strong> Eight steps from understanding the ask to recording the run, with the outcomes each answer must meet checked in code. One agent is on it (Bourdain), and a second uses its contract (Fraser).</li>
-      <li><strong>A judge that has to earn its vote.</strong> A second model grades what code can't, like taste and fit. It stays in shadow until it agrees with my own labels: 80% on at least 50 of them before it may annotate, 90% on one outcome before it may block. Today it is all shadow.</li>
-      <li><strong>Knowledge with receipts.</strong> Every fact in Bourdain's knowledge base carries its source and the date it was read: 326 places and 3,397 facts as of Oct 14.</li>
-      <li><strong>Evals that replay for $0.</strong> Every model and tool call is recorded against its request, so a run replays without a network or a bill. The golden sets are 72 real asks, kept private; the public tests run on synthetic twins.</li>
-      <li><strong>A decision ledger.</strong> One row per decision, with the agent, the rule, the latency and the cost.</li>
-      <li><strong>4,209 tests</strong> behind a pre-push gate that blocks anything red.</li>
-    </ul>
-
-    <p class="eyebrow" style="margin-top:44px">How an agent joins</p>
-    <h2>Prove it on its own door, then join Miya</h2>
-    <p>I don't add an agent straight into the assistant I talk to. Each one starts on its own front door, with its own bot and its own tests, where its failures are easy to see and can't break anything else. When it passes, it's wired in behind Miya, and Miya stays the one place I ask. Genie came in that way. Bourdain is next.</p>
-    <p>Orchestration is the part I'm least done with. Today a ladder of rules in code answers the asks it recognizes, and Miya's model handles the rest. Routing each ask by what every agent declares it can do is planned, not built.</p>
-
-    <p class="eyebrow" style="margin-top:44px">Honest scope</p>
-    <h2>Personal scale, real problems</h2>
-    <p>Rahat is not enterprise software. But a fluent agent that's confidently wrong, agents that disagree, a decision you can't prove, an evaluator you can't trust: those are the problems a company hits the day it runs a fleet. Solving them in a house, where I feel every failure the same day, is an honest way to learn them.</p>
-    <p><a href="https://github.com/modernthinkerbuilds/Rahat-Plane/blob/main/specs/ARCHITECTURE.md">Read how Rahat actually runs →</a></p>
+    <h2>How an agent joins</h2>
+    <p>Bourdain is the first agent to start on its own chat bot, with its own tests, where its failures are easy to see and can't break anything else. It has been there since Sep 20 and on the harness since Oct 4; when it passes, it's wired in behind Miya, and Miya stays the one place I ask. Genie went the other way round, behind Miya on Aug 6 and then its own bot for the household on Aug 10. Bourdain's route is the route from here on.</p>
+    <p>Orchestration is the part I'm least done with. Today sixteen rules in code answer the asks they recognize, most without a model, and Miya's model handles the rest. Routing each ask by what every agent declares it can do is planned, not built.</p>
+    <p><a href="https://github.com/modernthinkerbuilds/Rahat-Plane/blob/main/specs/ARCHITECTURE.md">Read how Rahat actually runs ↗</a></p>
   </div>
 </section>
 <section>
   <div class="wrap">
     <div class="subscribe">
       <div>
-        <h2>Get each new post by email</h2>
-        <p>The writing goes out on Substack. Every post also lands here, searchable.</p>
+        <h2>Get in touch</h2>
+        <p>The best way to reach me is LinkedIn. The code is on GitHub, and the writing is on Substack.</p>
       </div>
-      <a class="btn btn-primary" href="https://venkatsadras.substack.com/subscribe">Subscribe on Substack →</a>
+      <div class="actions" style="margin:0">
+        <a class="btn btn-primary" href="https://www.linkedin.com/in/venkatsadras/">LinkedIn ↗</a>
+        <a class="btn btn-ghost" href="https://github.com/modernthinkerbuilds">GitHub ↗</a>
+      </div>
     </div>
   </div>
 </section>
@@ -146,9 +156,10 @@
   <div class="wrap">
     <span>© 2026 Venkat Sadras · Views my own.</span>
     <nav aria-label="Elsewhere">
-      <a href="https://www.linkedin.com/in/venkatsadras/">LinkedIn</a>
-      <a href="https://github.com/modernthinkerbuilds">GitHub</a>
-      <a href="https://venkatsadras.substack.com">Substack</a>
+      <a href="https://www.linkedin.com/in/venkatsadras/">LinkedIn ↗</a>
+      <a href="https://github.com/modernthinkerbuilds">GitHub ↗</a>
+      <a href="https://venkatsadras.substack.com">Substack ↗</a>
+      <a href="https://venkatsadras.substack.com/subscribe">Subscribe ↗</a>
       <a href="https://venkatsadras.substack.com/feed">RSS</a>
     </nav>
   </div>
