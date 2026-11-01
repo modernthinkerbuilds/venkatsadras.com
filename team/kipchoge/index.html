@@ -1,0 +1,127 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Kipchoge: The runs. · Venkat Sadras</title>
+<meta name="description" content="Kipchoge is the running coach on Venkat Sadras&#x27;s team of AI agents: every number from code, the words from a model, and a message with a number that has no record behind it is not sent.">
+<link rel="canonical" href="https://venkatsadras.com/team/kipchoge/">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Venkat Sadras">
+<meta property="og:title" content="Kipchoge: The runs. · Venkat Sadras">
+<meta property="og:description" content="Kipchoge is the running coach on Venkat Sadras&#x27;s team of AI agents: every number from code, the words from a model, and a message with a number that has no record behind it is not sent.">
+<meta property="og:url" content="https://venkatsadras.com/team/kipchoge/">
+<meta property="og:image" content="https://venkatsadras.com/assets/img/og-card.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="theme-color" content="#eef1f7" media="(prefers-color-scheme: light)">
+<meta name="theme-color" content="#0d121a" media="(prefers-color-scheme: dark)">
+<link rel="icon" href="/assets/favicon.svg" type="image/svg+xml">
+<link rel="alternate" type="application/rss+xml" title="Venkat Sadras on Substack" href="https://venkatsadras.substack.com/feed">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo:wght@600;700;800&family=Source+Sans+3:wght@400;600&family=IBM+Plex+Mono:wght@400;500&display=swap">
+<link rel="stylesheet" href="/assets/site.css?v=3">
+<script src="/assets/site.js?v=3" defer></script>
+</head>
+<body>
+<a class="skip" href="#main">Skip to content</a>
+<header class="site-header">
+  <div class="wrap">
+    <a class="brand" href="/">Venkat Sadras</a>
+    <button class="menu-toggle" aria-expanded="false" aria-controls="nav"><span>Menu</span></button>
+    <nav class="nav" id="nav" aria-label="Main">
+      <a href="/miya/">Miya</a>
+      <a href="/team/" aria-current="page">Team</a>
+      <a href="/rahat/">Under the hood</a>
+      <a href="/writing/">Writing</a>
+      <a href="/demos/">Demos</a>
+      <a href="/about/">About</a>
+      <a class="btn btn-primary" href="https://www.linkedin.com/in/venkatsadras/">LinkedIn ↗</a>
+    </nav>
+  </div>
+</header>
+<main id="main">
+<section class="hero" style="--c: var(--store); --cb: var(--store-bg)">
+  <div class="wrap agent-hero">
+    <img src="/assets/team/kipchoge.svg" width="200" height="200" alt="Kipchoge, a badger on an easy run at first light, carrying a small logbook" class="round">
+    <div>
+      <p class="crumb"><a href="/team/">← The team</a></p>
+      <h1>Kipchoge</h1>
+      <p class="lede"><strong>My running coach. Reads every run from the watch, grades it against my own heart-rate cap, and tells me what to run next. Numbers from code, words from the model.</strong></p>
+      <p class="chips-row"><span class="st testing">In testing · its own door after Nov 1</span></p>
+    </div>
+  </div>
+</section>
+
+<section class="tight" style="--c: var(--store); --cb: var(--store-bg)">
+  <div class="wrap">
+    <div class="facts">
+      <div class="fact"><h2>The problem</h2><p>The coaching thread I used before this one prescribed a pace from a heart-rate model it had never built, quoted weeks of data it had never pulled, and read a trend into one noisy reading. Fluent and confident, and wrong where it mattered.</p></div>
+      <div class="fact"><h2>Why I have it</h2><p>A running coach is mostly arithmetic with a voice on top. Kipchoge computes every number in code from the watch data, and the model only explains. It's also the second agent on the shared harness, which is the real test of whether the platform under Miya is a platform.</p></div>
+      <div class="fact"><h2>What it does</h2><ul><li>Reads every run as it lands from the watch export: first and second half, the ramp, time in band, heart-rate drift, and artifacts like the spike after a stop.</li><li>Grades an easy run A to D against my own heart-rate cap, with margins and a borderline flag; normalizes pace for heart rate; keeps the trend.</li><li>On demand: /run, /next and /week call the model once, when I ask. /me, /zones, /goal, /trend, /routes and /run list never do. If the model fails, a template built from the records answers.</li><li>Says so when a symptom needs a clinician, and flags heat and an erratic heart rate at easy effort.</li></ul></div>
+      <div class="fact"><h2>Where it helped</h2><ul><li>Not live yet; it gets its own door after Nov 1. The evidence so far is a table: <b>24</b> checks against the real coaching thread (halves, grades, ramps, sleep, one artifact), <b>18</b> match, <b>6</b> wait on data the store doesn't hold yet, <b>0</b> misses.</li><li>In ten shadow messages, no number reached a message without a record behind it.</li><li>The second agent on the shared harness, after Bourdain. Bourdain's <b>72</b>-case snapshot was unchanged byte for byte after the change.</li></ul></div>
+    </div>
+    
+  </div>
+</section>
+
+<section style="--c: var(--store); --cb: var(--store-bg)">
+  <div class="wrap">
+    <div class="section-head">
+      <h2>How it works</h2>
+      <p>The steps, in the order a run meets them. The names are the real components in the code.</p>
+    </div>
+    <div class="flow-wrap">
+    <ol class="flow" style="--n:8">
+      <li style="--i:0"><b>Watch export</b>A run lands, with its heart-rate and distance series.</li>
+      <li style="--i:1"><b>Bridge</b>Keeps the route and the series the old bridge dropped, in one SQLite file at home.</li>
+      <li style="--i:2"><b>Engine</b>Computes every number in code: halves, ramp, time in band, drift, grade, normalized pace.</li>
+      <li style="--i:3"><b>Records</b>Each number is a record, with its source, its range and a confidence.</li>
+      <li style="--i:4"><b>The model</b>Writes the coaching with a placeholder wherever a number goes. It never writes a digit.</li>
+      <li style="--i:5"><b>Renderer</b>Fills each placeholder from its record, in my units.</li>
+      <li style="--i:6"><b>Checks</b>A stray digit, a number with no record, a pace outside the model's range: the message isn't sent.</li>
+      <li style="--i:7"><b>Telegram</b>The analysis, the next-run card or the week. A template from the records if the model fails.</li>
+    </ol>
+    <button class="replay" type="button" hidden>Replay</button>
+    </div>
+  </div>
+</section>
+
+<section class="tight" style="--c: var(--store); --cb: var(--store-bg)">
+  <div class="wrap">
+    <div class="facts">
+      <div class="fact wide"><h2>Not built yet</h2><ul><li>Its Telegram bot is written and tested, not installed. The evening card and the Sunday review are built and switched off; everything is on demand.</li><li>Its 22 conversational evals haven't run: the model's monthly budget ran out on Oct 25. They run on Nov 1.</li><li>The judge grades its answers in shadow, with 8 criteria, and has no vote.</li><li>Reaching it through Miya is built and switched off. The weekly planner, goal changes, readiness, races and intervals come in later slices.</li></ul>
+        <div class="actions" style="margin-top:6px">
+          <a class="btn btn-ghost" href="https://github.com/modernthinkerbuilds/Rahat-Plane/blob/main/specs/ARCHITECTURE.md#6-the-agents">How it runs, in the architecture doc ↗</a>
+          <a class="btn btn-ghost" href="https://github.com/modernthinkerbuilds/Rahat-Plane/tree/main/agents/kipchoge">Its folder in the repo ↗</a>
+          <a class="btn btn-ghost" href="https://modernthinkerbuilds.github.io/Rahat-Plane/specs/ADR-018.html">Walk the harness, step by step ↗</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="tight">
+  <nav class="wrap agent-nav" aria-label="Agents">
+    <a href="/team/bourdain/">← Bourdain</a>
+    <a href="/team/">All agents</a>
+    <a href="/miya/">Miya →</a>
+  </nav>
+</section>
+</main>
+<footer class="site-footer">
+  <div class="wrap">
+    <span>© 2026 Venkat Sadras · Views my own.</span>
+    <nav aria-label="Elsewhere">
+      <a href="https://www.linkedin.com/in/venkatsadras/">LinkedIn ↗</a>
+      <a href="https://github.com/modernthinkerbuilds">GitHub ↗</a>
+      <a href="https://venkatsadras.substack.com">Substack ↗</a>
+      <a href="https://venkatsadras.substack.com/subscribe">Subscribe ↗</a>
+      <a href="https://venkatsadras.substack.com/feed">RSS</a>
+    </nav>
+  </div>
+</footer>
+</body>
+</html>
