@@ -84,27 +84,7 @@
     <p class="muted" style="margin-top:18px">86 real questions from my family are kept as private tests that re-run for $0, and the code has 4,209 automated tests (Oct 17). It's open source.</p>
     <div class="actions">
       <a class="btn btn-ghost" href="/rahat/">How Rahat works →</a>
-      <a class="btn btn-ghost" href="https://github.com/modernthinkerbuilds/Rahat-Plane/blob/main/specs/ADR-018-outcome-contracts-and-independent-evaluation.md">The design decisions ↗</a>
-    </div>
-  </div>
-</section>
-
-<section>
-  <div class="wrap">
-    <div class="section-head">
-      <h2>Four product decisions</h2>
-      <p>A few weeks after I started talking to Miya, it told me something about myself that had never been true, in a flawless voice. That's when I stopped adding features and started making decisions like these.</p>
-    </div>
-    <div class="tbl-scroll">
-    <table class="tbl decisions">
-      <thead><tr><th scope="col">Decision</th><th scope="col">Instead of</th><th scope="col">What it bought</th></tr></thead>
-      <tbody>
-      <tr><th scope="row">Check every answer in code before it's sent</th><td data-label="Instead of">Rewriting the prompt ten times</td><td data-label="What it bought">I replayed 126 real messages: replies with the agents' internal notes leaking into them went to zero, and about one reply in twenty had a mistake caught and fixed before it reached me.</td></tr>
-      <tr><th scope="row">Build one shared engine that every new agent plugs into</th><td data-label="Instead of">A new engine for each agent</td><td data-label="What it bought">The running coach plugged in as the second agent, and the food agent's 72 test cases came out exactly the same as before.</td></tr>
-      <tr><th scope="row">Don't let an AI grader decide until it agrees with me</th><td data-label="Instead of">Trusting a second AI to grade answers from day one</td><td data-label="What it bought">It has graded 214 answers with no say yet; it earns a vote after it matches my own judgment on 50 answers, 8 times in 10.</td></tr>
-      <tr><th scope="row">Numbers come from code, not from the AI</th><td data-label="Instead of">Telling the AI not to make up numbers</td><td data-label="What it bought">A message with a number the code didn't compute is never sent. Checked against my old coaching chat: 24 numbers, 18 match, 6 still need data, 0 wrong.</td></tr>
-      </tbody>
-    </table>
+      <a class="btn btn-ghost" href="/rahat/#decisions">Why it's built this way →</a>
     </div>
   </div>
 </section>
@@ -113,17 +93,31 @@
   <div class="wrap">
     <div class="section-head">
       <h2>Seven agents on the platform</h2>
-      <p>Miya is the one I talk to; six specialists each own one job. Tap one for what it does, where it helped and how it works.</p>
+      <p>Miya is the one I talk to. It hands each ask to the specialist that owns it: four for training and recovery, two for family life. Tap one for what it does, where it helped and how it works.</p>
     </div>
-    <ul class="wall compact">
-<li><a href="/miya/"><img src="/assets/team/miya.jpg" width="88" height="88" alt="" class="round"><span class="nm">Miya</span><span class="rl">The one I talk to.</span><span class="st live">Live</span></a></li>
-<li><a href="/team/kobe/"><img src="/assets/team/kobe.jpg" width="88" height="88" alt="" class="round"><span class="nm">Kobe</span><span class="rl">The numbers.</span><span class="st live">Through Miya</span></a></li>
-<li><a href="/team/fraser/"><img src="/assets/team/fraser.jpg" width="88" height="88" alt="" class="round"><span class="nm">Fraser</span><span class="rl">Designs workouts.</span><span class="st live">Through Miya</span></a></li>
-<li><a href="/team/huberman/"><img src="/assets/team/huberman.jpg" width="88" height="88" alt="" class="round"><span class="nm">Huberman</span><span class="rl">The evening wind-down.</span><span class="st live">Through Miya</span></a></li>
-<li><a href="/team/genie/"><img src="/assets/team/genie.jpg" width="88" height="88" alt="" class="round"><span class="nm">Genie</span><span class="rl">Weekends and the family calendar.</span><span class="st live">Through Miya</span></a></li>
-<li><a href="/team/bourdain/"><img src="/assets/team/bourdain.jpg" width="88" height="88" alt="" class="round"><span class="nm">Bourdain</span><span class="rl">Where do we eat?</span><span class="st own">Own door</span></a></li>
-<li><a href="/team/kipchoge/"><img src="/assets/team/kipchoge.jpg" width="88" height="88" alt="" class="round"><span class="nm">Kipchoge</span><span class="rl">The runs.</span><span class="st own">Own door</span></a></li>
-</ul>
+    <div class="org">
+    <ul class="wall org-lead compact">
+      <li><a href="/miya/"><img src="/assets/team/miya.jpg" width="88" height="88" alt="" class="round"><span class="nm">Miya</span><span class="rl">The one I talk to. It hands each ask to the specialist that owns it.</span><span class="st live">Live</span></a></li>
+    </ul>
+    <div class="org-groups">
+      <div class="org-group" style="--cols:4">
+        <h3>Training and recovery</h3>
+        <ul class="wall compact">
+          <li><a href="/team/kobe/"><img src="/assets/team/kobe.jpg" width="88" height="88" alt="" class="round"><span class="nm">Kobe</span><span class="rl">The numbers.</span><span class="st live">Through Miya</span></a></li>
+          <li><a href="/team/fraser/"><img src="/assets/team/fraser.jpg" width="88" height="88" alt="" class="round"><span class="nm">Fraser</span><span class="rl">Designs workouts.</span><span class="st live">Through Miya</span></a></li>
+          <li><a href="/team/kipchoge/"><img src="/assets/team/kipchoge.jpg" width="88" height="88" alt="" class="round"><span class="nm">Kipchoge</span><span class="rl">The runs.</span><span class="st own">Own door now · Miya soon</span></a></li>
+          <li><a href="/team/huberman/"><img src="/assets/team/huberman.jpg" width="88" height="88" alt="" class="round"><span class="nm">Huberman</span><span class="rl">The evening wind-down.</span><span class="st live">Through Miya</span></a></li>
+        </ul>
+      </div>
+      <div class="org-group" style="--cols:2">
+        <h3>Family life</h3>
+        <ul class="wall compact">
+          <li><a href="/team/genie/"><img src="/assets/team/genie.jpg" width="88" height="88" alt="" class="round"><span class="nm">Genie</span><span class="rl">Weekends and the family calendar.</span><span class="st live">Through Miya</span></a></li>
+          <li><a href="/team/bourdain/"><img src="/assets/team/bourdain.jpg" width="88" height="88" alt="" class="round"><span class="nm">Bourdain</span><span class="rl">Where do we eat?</span><span class="st own">Own door now · Miya soon</span></a></li>
+        </ul>
+      </div>
+    </div>
+  </div>
   </div>
 </section>
 

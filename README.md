@@ -29,3 +29,16 @@ The site is live about a minute later.
 ## Adding a demo
 
 Add an `<li><article class="demo">…</article></li>` at the top of the list in `demos/index.html`, and update the "Demo" button in the Rahat section of `index.html`. Each demo shows only shipped behaviour and is labeled with its date.
+
+## Adding an agent
+
+Every surface that names, counts or groups the agents changes in the same commit, here and in the Rahat repo.
+
+- **Its page:** `team/<slug>/index.html`, from another specialist's page (problem, why, what it does, where it helped, how it works, not built yet). The crumb names its group.
+- **Both walls:** the grouped wall on `index.html` and `team/index.html`. Put it in its group (training and recovery, or family life; a new group gets its own dashed box). Chip: "Through Miya", or "Own door now · Miya soon".
+- **The Miya page:** one card under "What I ask Miya", in group order, above the "Anything else" foundation.
+- **The ring:** prev/next links on every agent page follow the wall order (Miya, then each group left to right).
+- **Counts:** Home hero ("Seven agents"), the Rahat section and team lead on Home, the Team lede ("six specialists", "all seven"), the Rahat page stat strip, the door line, and the terms table if it joins the harness.
+- **Elsewhere:** `sitemap.xml`; the share card (`assets/img/og-card.png`) if a count shows; About if it comes from my life (running links to Kipchoge).
+- **The Rahat repo, same day:** the README agents table (in group order, with its status), the counts line, "Who's on it" if it joins the harness, the doors box, the profile README's agent sentence and its copy in the profile repo; the architect updates ARCHITECTURE.md (section 6 and Appendix B) and the map page.
+- **Before the commit:** the portrait to the shared spec (480×480), and every new line checked against `private/privacy_terms.txt`.

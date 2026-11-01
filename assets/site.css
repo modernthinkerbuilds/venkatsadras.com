@@ -316,3 +316,24 @@ img.round { border-radius: 50%; object-fit: cover; background: #f6f1e7; box-shad
   .tbl.decisions th[scope="row"] { width: 100%; }
   .tbl.decisions td::before { content: attr(data-label); display: block; font-family: var(--display); font-weight: 600; font-size: 13px; color: var(--muted); margin-top: 4px; }
 }
+
+/* The team, grouped: Miya on top, two groups of specialists under it */
+.org { display: grid; gap: 0; }
+.org .wall.org-lead { grid-template-columns: minmax(0, 260px); justify-content: center; }
+.org .wall.org-lead .rl { max-width: 220px; }
+.org-groups { position: relative; display: grid; grid-template-columns: 2fr 1fr; gap: 16px; margin-top: 34px; }
+.org-groups::before { content: ""; position: absolute; left: 50%; top: -34px; width: 2px; height: 18px; background: var(--line-strong); }
+.org-groups::after { content: ""; position: absolute; left: calc((100% - 16px) / 3); right: calc((100% - 16px) / 6); top: -16px; height: 2px; background: var(--line-strong); }
+.org-group::before { content: ""; position: absolute; left: 50%; top: -17px; width: 2px; height: 16px; background: var(--line-strong); }
+.org-group { position: relative; border: 1px dashed var(--line-strong); border-radius: calc(var(--radius) + 4px); padding: 12px; }
+.org-group h3 { font-size: 15px; font-weight: 700; color: var(--muted); margin: 0 4px 10px; }
+.org-group .wall { grid-template-columns: repeat(var(--cols), minmax(0, 1fr)); }
+@media (max-width: 1000px) {
+  .org-groups { grid-template-columns: 1fr; }
+  .org-groups::after, .org-group::before { display: none; }
+  .org-groups::before { top: -34px; height: 34px; }
+}
+@media (max-width: 600px) { .org-group .wall { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
+
+/* Miya page: "anything else" is the foundation under the specialists */
+.asks .fact.foundation { grid-column: 1 / -1; background: var(--bg); border-style: dashed; border-color: var(--line-strong); text-align: center; }
