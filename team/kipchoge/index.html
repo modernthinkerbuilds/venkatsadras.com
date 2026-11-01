@@ -32,9 +32,9 @@
     <a class="brand" href="/">Venkat Sadras</a>
     <button class="menu-toggle" aria-expanded="false" aria-controls="nav"><span>Menu</span></button>
     <nav class="nav" id="nav" aria-label="Main">
+      <a href="/rahat/">Agent platform</a>
       <a href="/miya/">Miya</a>
       <a href="/team/" aria-current="page">Team</a>
-      <a href="/rahat/">Under the hood</a>
       <a href="/writing/">Writing</a>
       <a href="/demos/">Demos</a>
       <a href="/about/">About</a>
@@ -59,7 +59,7 @@
   <div class="wrap">
     <div class="facts">
       <div class="fact"><h2>The problem</h2><p>The coaching thread I used before this one prescribed a pace from a heart-rate model it had never built, quoted weeks of data it had never pulled, and read a trend into one noisy reading. Fluent and confident, and wrong where it mattered.</p></div>
-      <div class="fact"><h2>Why I have it</h2><p>A running coach is mostly arithmetic with a voice on top. Kipchoge computes every number in code from the watch data, and the model only explains. It's also the second agent on the shared harness, which is the real test of whether the platform under Miya is a platform.</p></div>
+      <div class="fact"><h2>Why I have it</h2><p>A running coach is mostly arithmetic with a voice on top. Kipchoge computes every number in code from the watch data, and the model only explains. It's one of two agents on the platform's <a href="/rahat/">harness</a>, the shared loop their answers run through, and the real test of whether Rahat is a platform.</p></div>
       <div class="fact"><h2>What it does</h2><ul><li>Reads every run from the watch export: first and second half, the ramp, time in band, heart-rate drift, and artifacts like the spike after a stop.</li><li>Grades an easy run A to D against my own heart-rate cap, with margins and a borderline flag; normalizes pace for heart rate; keeps the trend.</li><li>On demand: /run, /next and /week call the model once, when I ask. /me, /zones, /goal, /trend, /routes and /run list never do. If the model fails, a template built from the records answers.</li><li>Says so when a symptom needs a clinician, and flags heat and an erratic heart rate at easy effort.</li></ul></div>
       <div class="fact"><h2>Where it helped</h2><ul><li>Live on its own door since Nov 1. The evidence so far is a table: <b>24</b> checks against the real coaching thread (halves, grades, ramps, sleep, one artifact), <b>18</b> match, <b>6</b> wait on data the store doesn't hold yet, <b>0</b> misses.</li><li>In ten shadow messages, no number reached a message without a record behind it.</li><li>The second agent on the shared harness, after Bourdain. Bourdain's <b>72</b>-case snapshot was unchanged byte for byte after the change.</li></ul></div>
     </div>

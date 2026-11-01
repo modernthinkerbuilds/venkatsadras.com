@@ -304,3 +304,15 @@ img.round { border-radius: 50%; object-fit: cover; background: #f6f1e7; box-shad
 @media (max-width: 720px) { .meet { grid-template-columns: 1fr; gap: 16px; padding: 20px; } .meet img { width: 112px; height: 112px; } .asks-compact { grid-template-columns: 1fr; } }
 
 .lede + .lede { margin-top: 12px; }
+
+/* Home: the decisions table stacks into cards on a phone */
+.tbl.decisions th[scope="row"] { width: 26%; }
+@media (max-width: 640px) {
+  .tbl.decisions thead { display: none; }
+  .tbl.decisions, .tbl.decisions tbody, .tbl.decisions tr, .tbl.decisions th, .tbl.decisions td { display: block; width: 100%; }
+  .tbl.decisions tr { border-top: 1px solid var(--line-soft); padding: 8px 0; }
+  .tbl.decisions tr:first-child { border-top: 0; }
+  .tbl.decisions th, .tbl.decisions td { border-top: 0; padding: 4px 16px; }
+  .tbl.decisions th[scope="row"] { width: 100%; }
+  .tbl.decisions td::before { content: attr(data-label); display: block; font-family: var(--display); font-weight: 600; font-size: 13px; color: var(--muted); margin-top: 4px; }
+}

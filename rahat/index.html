@@ -3,13 +3,13 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Under the hood: Rahat, the platform under Miya · Venkat Sadras</title>
-<meta name="description" content="Miya is the agent Venkat Sadras talks to. Rahat is the open-source platform under it: specialist agents, checks in code on the way out, a harness for new agents, and a record of every decision.">
+<title>Rahat, an open-source agent platform · Venkat Sadras</title>
+<meta name="description" content="Rahat is the open-source AI agent platform Venkat Sadras built and runs at home: one shared loop agents answer through, tests that replay real questions for $0, checks in code, and a record of every decision. Seven agents run on it; Miya is the one he talks to.">
 <link rel="canonical" href="https://venkatsadras.com/rahat/">
 <meta property="og:type" content="website">
 <meta property="og:site_name" content="Venkat Sadras">
-<meta property="og:title" content="Under the hood: Rahat, the platform under Miya · Venkat Sadras">
-<meta property="og:description" content="Miya is the agent Venkat Sadras talks to. Rahat is the open-source platform under it: specialist agents, checks in code on the way out, a harness for new agents, and a record of every decision.">
+<meta property="og:title" content="Rahat, an open-source agent platform · Venkat Sadras">
+<meta property="og:description" content="Rahat is the open-source AI agent platform Venkat Sadras built and runs at home: one shared loop agents answer through, tests that replay real questions for $0, checks in code, and a record of every decision. Seven agents run on it; Miya is the one he talks to.">
 <meta property="og:url" content="https://venkatsadras.com/rahat/">
 <meta property="og:image" content="https://venkatsadras.com/assets/img/og-card.png">
 <meta property="og:image:width" content="1200">
@@ -32,9 +32,9 @@
     <a class="brand" href="/">Venkat Sadras</a>
     <button class="menu-toggle" aria-expanded="false" aria-controls="nav"><span>Menu</span></button>
     <nav class="nav" id="nav" aria-label="Main">
+      <a href="/rahat/" aria-current="page">Agent platform</a>
       <a href="/miya/">Miya</a>
       <a href="/team/">Team</a>
-      <a href="/rahat/" aria-current="page">Under the hood</a>
       <a href="/writing/">Writing</a>
       <a href="/demos/">Demos</a>
       <a href="/about/">About</a>
@@ -45,43 +45,70 @@
 <main id="main">
 <section class="hero">
   <div class="wrap">
-    <p class="eyebrow">Rahat · open source · Apache 2.0 · Mac mini at home</p>
-    <h1>Under the hood</h1>
-    <p class="lede"><strong>Miya is the agent I talk to. Rahat is the platform under it:</strong> the specialist agents, the checks between an answer and me, the harness Bourdain's answers run through, and a record of every decision. It runs around the clock on a Mac mini at home.</p>
+    <p class="eyebrow">Open source · Apache 2.0 · runs at home</p>
+    <h1>Rahat, my agent platform</h1>
+    <p class="lede"><strong>Rahat is the agent platform I built; seven agents run on it. Miya is the one I talk to.</strong> The platform owns routing, the harness an agent's answers run through, the evals, the policy checks, the ledger and the spend brake; an agent brings its job. It runs around the clock on a Mac mini at home.</p>
     <figure class="figure">
-      <video class="map" controls muted loop playsinline preload="none" poster="/assets/img/rahat-map.png" width="960" height="546" aria-label="Under the hood: a message goes from Telegram through Miya's rules to the agent that answers it, past the checks and into the shared record, animated">
+      <video class="map" controls muted loop playsinline preload="none" poster="/assets/img/rahat-map.png" width="960" height="546" aria-label="The Rahat map: a message goes from Telegram through Miya's rules to the agent that answers it, past the checks and into the shared record, animated">
         <source src="/assets/img/rahat-map.webm" type="video/webm">
         <source src="/assets/img/rahat-map.mp4" type="video/mp4">
       </video>
-      <a class="still" href="https://modernthinkerbuilds.github.io/Rahat-Plane/specs/RAHAT-ARCHITECTURE.html"><img src="/assets/img/rahat-map.png" width="1266" height="720" alt="Under the hood: a message goes from Telegram through Miya's rules to the agent that answers it, past the checks and into the shared record" loading="lazy"></a>
+      <a class="still" href="https://modernthinkerbuilds.github.io/Rahat-Plane/specs/RAHAT-ARCHITECTURE.html"><img src="/assets/img/rahat-map.png" width="1266" height="720" alt="The Rahat map: a message goes from Telegram through Miya's rules to the agent that answers it, past the checks and into the shared record" loading="lazy"></a>
       <figcaption><span>A <code>/week</code> message moving through Miya and the platform under it, from Telegram to Kobe, the agent that answers it.</span><a href="https://modernthinkerbuilds.github.io/Rahat-Plane/specs/RAHAT-ARCHITECTURE.html">Open the live page ↗</a></figcaption>
     </figure>
     <ul class="proof" aria-label="Rahat in numbers">
       <li><b>7</b> agents</li>
-      <li><b>3</b> doors</li>
+      <li><b>2</b> on the harness</li>
+      <li><b>4</b> doors</li>
       <li><b>4,209</b> tests</li>
-      <li><b>86</b> real asks in the eval sets</li>
-      <li><b>7,408</b> decisions logged</li>
+      <li><b>86</b> real asks in private eval sets</li>
     </ul>
-    <p class="asof">Agents (Nov 1) and tests (Oct 17) counted in <a href="https://github.com/modernthinkerbuilds/Rahat-Plane">the repo</a>; the eval sets (Oct 17) and the decision ledger (Oct 14) are private, so those are my counts.</p>
+    <p class="asof">Agents, harness agents and doors counted Nov 1 and tests Oct 17, in <a href="https://github.com/modernthinkerbuilds/Rahat-Plane">the repo</a>; the eval sets (Oct 17) are private, so that one is my count.</p>
   </div>
 </section>
 
 <section class="tight">
-  <div class="wrap narrow prose">
-    <h2>Personal scale, real problems</h2>
-    <p>Rahat is not enterprise software. But a fluent agent that's confidently wrong, agents that disagree, a decision you can't prove and an evaluator you can't trust are the problems a company hits the day it runs a fleet. The same parts have company names.</p>
-    <table class="tbl">
-      <thead><tr><th scope="col">In my house</th><th scope="col">In a company</th></tr></thead>
+  <div class="wrap prose">
+    <h2>Rahat in agent-platform terms</h2>
+    <p>Rahat is personal scale, not enterprise software. But it has the parts an agent platform needs, and here they are in the words agent-platform teams use, with what's live and what isn't.</p>
+    <div class="tbl-scroll">
+    <table class="tbl running">
+      <thead><tr><th scope="col">What it's called</th><th scope="col">In Rahat</th><th scope="col">Status</th><th scope="col">Code</th></tr></thead>
       <tbody>
-      <tr><td><b>The Charter.</b> Rules every write and nudge passes before it happens: quiet hours, recovery blocks, vetoes. Every verdict logged.</td><td>Policy engine</td></tr>
-      <tr><td><b>The decision ledger.</b> One row per decision: agent, rule, latency, cost.</td><td>Audit trail</td></tr>
-      <tr><td><b>Private golden sets, public synthetic twins.</b> The family's real asks stay private; the public tests run on look-alikes.</td><td>Evals without exposing user data</td></tr>
-      <tr><td><b>The household gate.</b> Only paired phones get in.</td><td>Access control</td></tr>
-      <tr><td><b>The private-words gate.</b> A push that would publish a name, an address, a token or a chat id is refused.</td><td>Leak prevention</td></tr>
+      <tr><th scope="row">Orchestration and routing</th><td>Miya: 16 rules in code, then Miya's model, which hands work to six specialists</td><td>Live. Routing by what each agent declares it can do: planned</td><td><a href="https://github.com/modernthinkerbuilds/Rahat-Plane/blob/main/new_plane/miya_runner/delegate_classifier.py">delegate_classifier.py</a></td></tr>
+      <tr><th scope="row">Agent harness</th><td>One eight-step loop the platform owns, not the agent (ADR-018)</td><td>Live for Bourdain (Oct 4) and Kipchoge (Nov 1)</td><td><a href="https://github.com/modernthinkerbuilds/Rahat-Plane/tree/main/core/harness">core/harness/</a></td></tr>
+      <tr><th scope="row">Agent registry and manifests</th><td>Agents register at boot; a harness agent declares its tools, budgets, outcomes and shapes in a manifest checked in code, with a conformance test</td><td>Live for the two harness agents. Huberman isn't registered for hand-offs yet</td><td><a href="https://github.com/modernthinkerbuilds/Rahat-Plane/blob/main/core/manifest.py">core/manifest.py</a></td></tr>
+      <tr><th scope="row">Tool access</th><td>Tools allow-listed per agent; a brake per ask (Bourdain: 12 tool calls, 10 searches, $0.50)</td><td>Live in the harness. MCP: not built</td><td><a href="https://github.com/modernthinkerbuilds/Rahat-Plane/blob/main/agents/bourdain/manifest.json">manifest.json</a></td></tr>
+      <tr><th scope="row">Guardrails and output checks</th><td>A validator on Miya's replies (7 checks); Fraser's contract (10); numbers from records</td><td>Live</td><td><a href="https://github.com/modernthinkerbuilds/Rahat-Plane/blob/main/new_plane/miya_runner/validator.py">validator.py</a></td></tr>
+      <tr><th scope="row">Human in the loop</th><td>The judge gets authority only from my labels; a failed answer is repaired once or says what failed</td><td>Live. Approval before a risky action: not built</td><td><a href="https://github.com/modernthinkerbuilds/Rahat-Plane/blob/main/core/harness/control.py">control.py</a></td></tr>
+      <tr><th scope="row">Evals</th><td>Every model and tool call recorded against its request; 86 real asks replay for $0; public tests on synthetic twins</td><td>Live</td><td><a href="https://github.com/modernthinkerbuilds/Rahat-Plane/blob/main/core/cassette.py">cassette.py</a></td></tr>
+      <tr><th scope="row">Policy engine</th><td>The Charter</td><td>Live for Genie's calendar writes. Kobe's policies and Miya's nudges don't route through it yet</td><td><a href="https://github.com/modernthinkerbuilds/Rahat-Plane/blob/main/core/charter.py">charter.py</a></td></tr>
+      <tr><th scope="row">Audit trail</th><td>The decision ledger: agent, rule, latency and cost per decision</td><td>Live</td><td><a href="https://github.com/modernthinkerbuilds/Rahat-Plane/blob/main/core/decisions.py">decisions.py</a></td></tr>
+      <tr><th scope="row">Spend controls</th><td>A cost ledger, a budget gate on the newer paths, and the per-ask brake</td><td>Partial: Miya's synthesizer isn't metered yet</td><td><a href="https://github.com/modernthinkerbuilds/Rahat-Plane/blob/main/core/budget.py">budget.py</a></td></tr>
+      <tr><th scope="row">Memory</th><td>Typed memory the agents share</td><td>In daily use. Nightly consolidation: not scheduled since May</td><td><a href="https://github.com/modernthinkerbuilds/Rahat-Plane/tree/main/core/memory">core/memory/</a></td></tr>
+      <tr><th scope="row">Access control</th><td>The household gate: only paired phones get in</td><td>Live</td><td><a href="https://github.com/modernthinkerbuilds/Rahat-Plane/tree/main/new_plane/genie_runner">genie_runner/</a></td></tr>
+      <tr><th scope="row">Leak prevention</th><td>A push that would publish a name, an address, a token or a chat id is refused</td><td>Live</td><td><a href="https://github.com/modernthinkerbuilds/Rahat-Plane/blob/main/scripts/hooks/pre-push">pre-push</a></td></tr>
       </tbody>
     </table>
+    </div>
     <p class="muted">Gaps I know about are pinned as tests marked <code>SAFETY TARGET</code> and expected to fail, so each one stays named in the suite until it's closed.</p>
+  </div>
+</section>
+
+<section class="tight">
+  <div class="wrap prose">
+    <h2>Three loops</h2>
+    <p>Three loops do most of the work: one answers, one tests, one keeps fixed bugs fixed.</p>
+    <div class="tbl-scroll">
+    <table class="tbl running">
+      <thead><tr><th scope="col">Loop</th><th scope="col">What runs</th><th scope="col">What I measure</th></tr></thead>
+      <tbody>
+      <tr><th scope="row">The answer loop (the harness)</th><td>Understand → set the bar → do the work under a brake → check in code → a second AI grades, in shadow → one repair or say what failed → fill numbers from records → keep a record</td><td>Outcomes passed and failed per answer, repairs per answer, cost per answer, time to answer</td></tr>
+      <tr><th scope="row">The eval loop</th><td>Every model and tool call is recorded against its request; the private test sets (72 food questions, 14 weekend questions) replay with no network and no bill; the judge grades in shadow until it agrees with my labels</td><td>Pass rate per release; the judge's agreement with my labels; the snapshot diff when the platform changes</td></tr>
+      <tr><th scope="row">The fix loop</th><td>A failure in real use becomes a regression test; a fix without its own test is refused; the pre-push gate runs the unit, contract and regression layers and the private-words check</td><td>Tests added per fix (1,877 tests in 219 regression pins, Oct 17); a known-fixed bug coming back blocks the push</td></tr>
+      </tbody>
+    </table>
+    </div>
   </div>
 </section>
 
@@ -94,14 +121,14 @@
         <span class="go">Open the map ↗</span>
       </a>
       <a class="card" href="https://modernthinkerbuilds.github.io/Rahat-Plane/specs/ADR-018.html">
-        <h2>Inside one agent</h2>
-        <p>The eight-step harness Bourdain's answers run through, from understanding the ask to recording the run.</p>
+        <h2>The harness, step by step</h2>
+        <p>The eight-step loop Bourdain's and Kipchoge's answers run through, from understanding the ask to recording the run.</p>
         <span class="go">Walk the harness ↗</span>
       </a>
-      <a class="card" href="https://github.com/modernthinkerbuilds/Rahat-Plane">
-        <h2>The code</h2>
-        <p>The architecture, the decision records and the tests. Apache 2.0.</p>
-        <span class="go">Open the repo ↗</span>
+      <a class="card" href="https://github.com/modernthinkerbuilds/Rahat-Plane/blob/main/specs/ADR-018-outcome-contracts-and-independent-evaluation.md">
+        <h2>The decision records</h2>
+        <p>ADR-018 and its amendment A6: what the platform owns, what an agent brings, and why. The code is Apache 2.0.</p>
+        <span class="go">Read the decisions ↗</span>
       </a>
     </div>
   </div>
@@ -117,7 +144,8 @@
       <tbody>
       <tr><th scope="row">A validator on Miya's replies</th><td>Live. Seven checks against the facts on record; the reply is rewritten before it sends.</td><td class="when">Oct 17</td><td><a href="https://github.com/modernthinkerbuilds/Rahat-Plane/blob/main/new_plane/miya_runner/validator.py">validator.py</a></td></tr>
       <tr><th scope="row">Fraser's workout contract</th><td>Live. Ten checks in code and one repair pass; anything still unverified is named in the reply.</td><td class="when">since Oct 11</td><td><a href="https://github.com/modernthinkerbuilds/Rahat-Plane/blob/main/agents/fraser/contract.py">contract.py</a></td></tr>
-      <tr><th scope="row">The harness<span class="def">One eight-step loop an answer runs through, owned by the platform rather than the agent.</span></th><td>Bourdain's answers run through it. Fraser uses its contract step.</td><td class="when">since Oct 4</td><td><a href="https://modernthinkerbuilds.github.io/Rahat-Plane/specs/ADR-018.html">Inside one agent ↗</a></td></tr>
+      <tr><th scope="row">The harness<span class="def">One eight-step loop an answer runs through, owned by the platform rather than the agent.</span></th><td>Bourdain since Oct 4; Kipchoge, the running coach, since Nov 1, the first agent to bring its own shapes (amendment A6). Fraser uses the contract step.</td><td class="when">Nov 1</td><td><a href="https://modernthinkerbuilds.github.io/Rahat-Plane/specs/ADR-018.html">The harness ↗</a></td></tr>
+      <tr><th scope="row">Numbers from records<span class="def">The model writes a placeholder where a number goes; code fills it from a record.</span></th><td>Live for Kipchoge. A message with a number that has no record behind it isn't sent.</td><td class="when">Nov 1</td><td><a href="https://github.com/modernthinkerbuilds/Rahat-Plane/blob/main/core/harness/numbers.py">numbers.py</a></td></tr>
       <tr><th scope="row">The judge<span class="def">A second model that grades what code can't, like taste and fit.</span></th><td>Shadow. 214 verdicts recorded and none acted on; it has 3 of the 50 labels of mine it needs before it gets a vote.</td><td class="when">Oct 17</td><td><a href="https://github.com/modernthinkerbuilds/Rahat-Plane/blob/main/core/judge.py">judge.py</a></td></tr>
       <tr><th scope="row">Knowledge with receipts<span class="def">Each fact carries where it came from and when.</span></th><td>326 places and 3,397 facts in Bourdain's knowledge base, each with its source and the date it was read.</td><td class="when">Oct 14</td><td><a href="https://github.com/modernthinkerbuilds/Rahat-Plane/tree/main/agents/bourdain">agents/bourdain/</a></td></tr>
       <tr><th scope="row">Replays for $0<span class="def">Every model and tool call is recorded against its request, so a run replays with no network and no bill.</span></th><td>The golden sets, 86 real asks (72 food, 14 weekend), stay private. The public tests run on synthetic twins, look-alikes with nothing real in them.</td><td class="when">Oct 17</td><td><a href="https://github.com/modernthinkerbuilds/Rahat-Plane/blob/main/core/cassette.py">cassette.py</a></td></tr>
@@ -131,8 +159,10 @@
 
 <section class="tight">
   <div class="wrap narrow prose">
-    <h2>How an agent joins</h2>
-    <p>Bourdain is the first agent to start on its own door, with its own tests, where its failures are easy to see and can't break anything else. It has been there since Sep 20 and on the harness since Oct 4; when it passes, it's wired in behind Miya, and Miya stays the one place I ask. Genie went the other way round, behind Miya on Aug 6 and then its own door for the household on Aug 10. Bourdain's route is the route from here on.</p>
+    <h2>How an agent joins the platform</h2>
+    <p>A new agent brings five things: a manifest (its tools, budgets, latency and capabilities), an outcome library (what a good answer must meet: Bourdain 52, Kipchoge 19), a checklist for the judge (21 and 8 criteria), its own shapes (what it reads, what it answers, what counts as evidence) and its tests. The platform brings the loop, the spending brake, the ledger, the judge, the controller and the record.</p>
+    <p>The gate before it serves: a conformance test, and the first agent's 72-case snapshot unchanged, byte for byte. Kipchoge, the running coach, went through it: the shapes amendment was accepted on Oct 25, and it went live on its own Telegram bot on Nov 1.</p>
+    <p>Each agent starts on its own door, with its own tests, where its failures can't break anything else; when it passes, it's wired in behind Miya, and Miya stays the one place I ask.</p>
     <p>Orchestration is the part I'm least done with. Today sixteen rules in code answer the asks they recognize, most without a model, and Miya's model handles the rest. Routing each ask by what every agent declares it can do is planned, not built.</p>
     <p><a href="https://github.com/modernthinkerbuilds/Rahat-Plane/blob/main/specs/ARCHITECTURE.md">Read how Rahat actually runs ↗</a></p>
   </div>
